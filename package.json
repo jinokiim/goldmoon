@@ -1,5 +1,6 @@
 {
-  "name": "blahx2",
+  "name": "goldmoon",
+  "author": "wlsghrla94@gmail.com",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.14",
+    "@mui/material": "^5.10.14",
+    "@mui/styles": "^5.10.14",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
