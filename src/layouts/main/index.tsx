@@ -5,7 +5,7 @@ import { pick } from 'lodash';
 import Header from './Header';
 import Content from './Content';
 import Footer from './Footer';
-import useSettings from 'hooks/useSettings';
+import useSettings from '@/src/hooks/useSettings';
 import { SxProps } from '@mui/system';
 // import { isIOS } from 'react-device-detect';
 // import { logger } from 'utils';

@@ -1,9 +1,9 @@
 import { NextPage } from 'next';
 import Button from '@mui/material/Button';
 
-import LayoutMain from 'layouts/main';
+import LayoutMain from '@/src/layouts/main';
 import { Box } from '@mui/material';
-import useSettings from '@/hooks/useSettings';
+import useSettings from '@/src/hooks/useSettings';
 
 const IndexPage: NextPage = function () {
   const { headerHeight } = useSettings();

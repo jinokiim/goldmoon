@@ -10,7 +10,7 @@ import {
   ThemeColor,
   SettingsContextProps,
   TLayoutSetting
-} from '../@types/settings';
+} from '../../@types/settings';
 // import { useTheme } from '@mui/system';
 // import { logger } from 'utils';
 
