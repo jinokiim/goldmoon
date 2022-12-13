@@ -2,7 +2,7 @@
 // import { useTheme } from '@mui/material/styles';
 import { BoxProps } from '@mui/material';
 // import { logger } from 'utils';
-import { COLORS } from 'theme/palette';
+import { COLORS } from '@/palette';
 
 // ----------------------------------------------------------------------
 

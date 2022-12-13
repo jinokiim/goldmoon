@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, Tooltip, TooltipProps, tooltipClasses, styled, BoxProps } from '@mui/material';
-import { COLORS } from 'theme/palette';
+import { COLORS } from @/palette;
 
 // ----------------------------------------------------------------------
 export const ToolTipCPWrapper = styled(({ className, ...props }: TooltipProps) => (

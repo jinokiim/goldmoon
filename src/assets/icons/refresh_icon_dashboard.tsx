@@ -1,7 +1,7 @@
+import useTimeoutFn from '@/src/hooks/useTimeout';
 import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Box, BoxProps } from '@mui/material';
-import useTimeoutFn from 'hooks/useTimeout';
 import { useEffect, useState } from 'react';
 // ----------------------------------------------------------------------
 

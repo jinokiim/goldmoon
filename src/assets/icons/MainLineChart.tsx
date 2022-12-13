@@ -1,6 +1,6 @@
 // material
 import { Box, BoxProps } from '@mui/material';
-// import { COLORS } from 'theme/palette';
+// import { COLORS } from '@/palette';
 // ----------------------------------------------------------------------
 
 interface Props extends BoxProps {

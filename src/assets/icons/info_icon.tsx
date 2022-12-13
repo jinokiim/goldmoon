@@ -1,7 +1,7 @@
 // material
 import { useTheme } from '@mui/material/styles';
 import { BoxProps } from '@mui/material';
-import { COLORS } from 'theme/palette';
+import { COLORS } from '@/palette';
 // ----------------------------------------------------------------------
 
 export default function InfoIcon({ ...other }: BoxProps) {

@@ -1,7 +1,7 @@
 // material
 // import { useTheme } from '@mui/material/styles';
 import { Box, BoxProps } from '@mui/material';
-// import { COLORS } from 'theme/palette';
+// import { COLORS } from '@/palette';
 // ----------------------------------------------------------------------
 
 export default function Inv_history_icon4({ ...other }: BoxProps) {

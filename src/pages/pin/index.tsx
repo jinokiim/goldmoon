@@ -1,16 +1,18 @@
 import { NextPage } from 'next';
-import Button from '@mui/material/Button';
+import { useRouter } from 'next/router';
 
+import Button from '@mui/material/Button';
 import Layout from '@/src/layouts/main';
 import { Box, Typography } from '@mui/material';
 import useSettings from '@/src/hooks/useSettings';
 import { SxProps, Theme } from '@mui/system';
-import PinMask from '@/src/component/auth/PinMask';
+import PinMask from '@/src/components/auth/PinMask';
 import useCustomKeypad from '@/src/hooks/useCustomKeypad';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import { COLORS } from '@/palette';
-import { SecureKeypad } from '@/src/component/secure-keypad';
+import { SecureKeypad } from '@/src/components/secure-keypad';
+import AppHeader from '@/src/components/Header';
 
 // ----------------------------------------------------------------------
 
@@ -23,8 +25,9 @@ const errMsgStyles = {
   wordBreak: 'keep-all'
 } as SxProps<Theme>;
 
-const IndexPage: NextPage = function () {
+const IndexPage = function () {
   const theme = useTheme();
+  const router = useRouter();
 
   const { headerHeight } = useSettings();
   const [isErrorMsg, setIsErrorMsg] = useState<boolean>(false);
@@ -98,12 +101,18 @@ const IndexPage: NextPage = function () {
     console.log('@@@@@@@@@ 전송');
   }
 
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <Layout
-      header={
-        <>
-          {/* <AppHeader onPrev={() => navigate(-1)} /> */}
-          {/* {type === 'login' && (
+    mounted && (
+      <Layout
+        header={
+          <>
+            <AppHeader onPrev={() => router.push('/')} />
+            {/* {type === 'login' && (
             <Box sx={{ textAlign: 'right', mx: 2, my: 1.5 }}>
               <Button
                 variant="text"
@@ -116,46 +125,47 @@ const IndexPage: NextPage = function () {
               </Button>
             </Box>
           )} */}
-        </>
-      }
-      content={
-        <Box
-          sx={{
-            pt: 7,
-            px: 2,
-            height: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center'
-          }}
-        >
-          <Box sx={{ height: '100%' }}>
-            <Typography variant="h3" sx={{ ...errMsgStyles }}>
-              비밀번호를 입력해주세요
-            </Typography>
+          </>
+        }
+        content={
+          <Box
+            sx={{
+              pt: 7,
+              px: 2,
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center'
+            }}
+          >
+            <Box sx={{ height: '100%' }}>
+              <Typography variant="h3" sx={{ ...errMsgStyles }}>
+                비밀번호를 입력해주세요
+              </Typography>
 
-            <PinMask
-              password={pass}
-              maxInputSize={maxInputSize}
-              errorMessage={defaultPinHint}
-              errorMessageStyles={{
-                // color: errorMessage === defaultPinHint ? '#33374D' : theme.palette.error.main
-                color: isErrorMsg ? theme.palette.error.main : COLORS.primary500
-              }}
-              sx={{}}
-            />
-            <SecureKeypad
-              pinStyles={{ backgroundColor: '#FFF' }}
-              shouldReset={true}
-              type="pin"
-              maxInputSize={maxInputSize}
-              onReset={onReset}
-              onSubmit={onSubmit}
-            />
+              <PinMask
+                password={pass}
+                maxInputSize={maxInputSize}
+                errorMessage={defaultPinHint}
+                errorMessageStyles={{
+                  // color: errorMessage === defaultPinHint ? '#33374D' : theme.palette.error.main
+                  color: isErrorMsg ? theme.palette.error.main : COLORS.primary500
+                }}
+                sx={{}}
+              />
+              <SecureKeypad
+                pinStyles={{ backgroundColor: '#FFF' }}
+                shouldReset={true}
+                type="pin"
+                maxInputSize={maxInputSize}
+                onReset={onReset}
+                onSubmit={onSubmit}
+              />
+            </Box>
           </Box>
-        </Box>
-      }
-    />
+        }
+      />
+    )
   );
 };
 
