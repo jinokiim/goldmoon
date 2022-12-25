@@ -1,5 +1,5 @@
 import { Box, BoxProps } from '@mui/material';
-import { COLORS } from '@/palette';
+import { COLORS } from '../../theme/palette';
 
 // ----------------------------------------------------------------------
 

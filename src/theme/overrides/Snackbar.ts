@@ -1,8 +1,9 @@
-import { Theme } from '@mui/material/styles';
+// import { Theme } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export default function Snackbar(theme: Theme) {
+export default function Snackbar() {
+  // export default function Snackbar(theme: Theme) {
   return {
     MuiSnackbarContent: {
       styleOverrides: {

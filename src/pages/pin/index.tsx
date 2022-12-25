@@ -1,16 +1,16 @@
-import { NextPage } from 'next';
+// import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Layout from '@/src/layouts/main';
 import { Box, Typography } from '@mui/material';
-import useSettings from '@/src/hooks/useSettings';
+// import useSettings from '@/src/hooks/useSettings';
 import { SxProps, Theme } from '@mui/system';
 import PinMask from '@/src/components/auth/PinMask';
 import useCustomKeypad from '@/src/hooks/useCustomKeypad';
 import { useEffect, useState } from 'react';
 import { useTheme } from '@mui/material/styles';
-import { COLORS } from '@/palette';
+import { COLORS } from '../../theme/palette';
 import { SecureKeypad } from '@/src/components/secure-keypad';
 import AppHeader from '@/src/components/Header';
 
@@ -29,10 +29,18 @@ const IndexPage = function () {
   const theme = useTheme();
   const router = useRouter();
 
-  const { headerHeight } = useSettings();
-  const [isErrorMsg, setIsErrorMsg] = useState<boolean>(false);
+  // const { headerHeight } = useSettings();
+  const [
+    isErrorMsg
+    // setIsErrorMsg
+  ] = useState<boolean>(false);
 
-  const { password, setPassword, getPassword, setIsKeypadOpen } = useCustomKeypad();
+  const {
+    password
+    //  setPassword,
+    //  getPassword,
+    // setIsKeypadOpen
+  } = useCustomKeypad();
 
   const pass = password as number[];
   // const isReset = type === 'reset';

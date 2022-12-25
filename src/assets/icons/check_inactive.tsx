@@ -2,7 +2,7 @@
 // import { useTheme } from '@mui/material/styles';
 import { BoxProps } from '@mui/material';
 // import { logger } from 'utils';
-import { COLORS } from '@/palette';
+import { COLORS } from '../../theme/palette';
 
 // ----------------------------------------------------------------------
 
@@ -17,9 +17,9 @@ export default function CheckInactiveIcon({
   width = 22,
   height = 22,
   checkedColor = COLORS.white,
-  circleColor = COLORS.neutral4,
-  ...other
-}: Props) {
+  circleColor = COLORS.neutral4
+}: // ...other
+Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

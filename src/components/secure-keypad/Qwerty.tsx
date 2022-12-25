@@ -5,7 +5,7 @@ import { capitalize } from 'lodash';
 import BackspaceIcon from '@mui/icons-material/Backspace';
 import { KeyTypes, Key, nums, keys, buttons } from './consts';
 import { useTheme } from '@mui/material/styles';
-import { COLORS } from '@/palette';
+import { COLORS } from '../../theme/palette';
 import ShiftKeyIcon from '@/src/assets/icons/shift_key';
 import useCustomKeypad from '@/src/hooks/useCustomKeypad';
 // import { logger } from 'utils';

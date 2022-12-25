@@ -71,7 +71,7 @@ function MainLayout(props: MainLayoutProps): ReactElement {
 
   const hasNav = props?.hasNav || false;
   const isLoading = props?.isLoading || false;
-  const loadingTitle = props?.loadingTitle || '';
+  // const loadingTitle = props?.loadingTitle || '';
   const hasSegue = props?.hasSegue || false;
   const isPortalSticky = props?.isPortalSticky || false;
   const { headerHeight, footerHeight, navigationHeight, onChangeLayout, onSetNavigation } =

@@ -1,14 +1,14 @@
 // material
 import { useTheme } from '@mui/material/styles';
 import { GlobalStyles as GlobalThemeStyles } from '@mui/material';
-import { useLocation } from 'react-router';
+// import { useLocation } from 'react-router';
 // import { has } from 'lodash';
 
 // ----------------------------------------------------------------------
 
 export default function GlobalStyles() {
   const theme = useTheme();
-  const location = useLocation();
+  // const location = useLocation();
 
   return (
     <GlobalThemeStyles
@@ -23,25 +23,19 @@ export default function GlobalStyles() {
           width: '100%',
           height: '100%',
           WebkitOverflowScrolling: 'touch',
-          background:
-            location.pathname === '/dashboard/market'
-              ? 'linear-gradient(to bottom, #2E9BFF, #2E9BFF 50%, white 50%)'
-              : '#ffffff'
+          background: '#ffffff'
         },
         body: {
           width: '100%',
           height: '100%',
-          background:
-            location.pathname === '/dashboard/market'
-              ? 'linear-gradient(to bottom, #2E9BFF, #2E9BFF 50%, white 50%)'
-              : '#ffffff',
-          position: location.pathname === '/dashboard/market' ? 'fixed' : 'relative',
-          overflow: location.pathname === '/dashboard/market' ? 'hidden' : 'unset'
+          background: '#ffffff',
+          position: 'relative',
+          overflow: 'unset'
         },
         '#root': {
           width: '100%',
           height: '100%',
-          overflowY: location.pathname === '/dashboard/market' ? 'scroll' : 'unset'
+          overflowY: 'unset'
         },
 
         // div: {

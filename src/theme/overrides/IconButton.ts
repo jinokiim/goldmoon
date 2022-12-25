@@ -1,8 +1,9 @@
-import { Theme } from '@mui/material/styles';
+// import { Theme } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export default function IconButton(theme: Theme) {
+export default function IconButton() {
+  // export default function IconButton(theme: Theme) {
   return {
     MuiIconButton: {
       styleOverrides: {

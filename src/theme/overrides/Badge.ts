@@ -1,9 +1,10 @@
-import { Theme } from '@mui/material/styles';
+// import { Theme } from '@mui/material/styles';
 import { COLORS } from '@/src/theme/palette';
 
 // ----------------------------------------------------------------------
 
-export default function Badge(theme: Theme) {
+export default function Badge() {
+  // export default function Badge(theme: Theme) {
   return {
     MuiBadge: {
       styleOverrides: {

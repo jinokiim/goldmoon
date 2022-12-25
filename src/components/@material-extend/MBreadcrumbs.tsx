@@ -1,6 +1,6 @@
 import { last } from 'lodash';
 // import { Link as RouterLink } from 'react-router-dom';
-import { Box, Link, Typography, Breadcrumbs, BreadcrumbsProps } from '@mui/material';
+import { Box, Typography, Breadcrumbs, BreadcrumbsProps } from '@mui/material';
 import { ReactElement } from 'react';
 
 // ----------------------------------------------------------------------
@@ -24,7 +24,7 @@ type TLink = {
 };
 
 function LinkItem({ link }: { link: TLink }) {
-  const { href, name, icon } = link;
+  const { name, icon } = link;
   return (
     <Box>
       {icon && (

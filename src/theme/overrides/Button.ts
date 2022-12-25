@@ -1,4 +1,4 @@
-import { Theme } from '@mui/material/styles';
+// import { Theme } from '@mui/material/styles';
 import { COLORS } from '@/src/theme/palette';
 import typography from '@/src/theme/typography';
 
@@ -12,7 +12,8 @@ declare module '@mui/material/Button' {
   }
 }
 
-export default function Button(theme: Theme) {
+export default function Button() {
+  // export default function Button(theme: Theme) {
   return {
     MuiButton: {
       styleOverrides: {

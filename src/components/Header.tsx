@@ -10,7 +10,7 @@ import {
 } from '@mui/icons-material';
 
 import { isFunction } from 'lodash';
-import { COLORS } from '@/palette';
+import { COLORS } from '../theme/palette';
 import React from 'react';
 import ArrowBackHeader from '../assets/icons/arrow_back_header';
 import NotificationIcon from '../assets/icons/notification_icon';
@@ -64,7 +64,7 @@ export default function AppHeader(props: Props): ReactElement {
     titleAlign = 'center',
     leftPos = '0',
     minHeight = '44px',
-    showLogo = false,
+    // showLogo = false,
     onPrev,
     onPrevText,
     onLogout,
@@ -76,7 +76,7 @@ export default function AppHeader(props: Props): ReactElement {
     onManage,
     onFAQ,
     onBookmark,
-    onDownload,
+    // onDownload,
     onMore,
     onAdd,
     moreOptions,

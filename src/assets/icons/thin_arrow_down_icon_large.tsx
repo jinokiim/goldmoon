@@ -1,4 +1,4 @@
-import { BoxProps } from '@mui/material';
+import { Box, BoxProps } from '@mui/material';
 
 interface Props extends BoxProps {
   width?: number;
@@ -13,20 +13,22 @@ export default function ThinArrowDownIconLarge({
   ...other
 }: Props) {
   return (
-    <svg
-      width={width}
-      height={height}
-      viewBox="0 0 14 8"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M13 0.999999L7 7L0.999999 1"
-        stroke={color}
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <Box {...other}>
+      <svg
+        width={width}
+        height={height}
+        viewBox="0 0 14 8"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13 0.999999L7 7L0.999999 1"
+          stroke={color}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </Box>
   );
 }
