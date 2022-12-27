@@ -6,7 +6,7 @@ import checkmarkCircle2Fill from '@iconify/icons-eva/checkmark-circle-2-fill';
 // material
 import { Theme } from '@mui/material/styles';
 // @types
-import { ColorSchema } from '../../../@types/theme';
+import { ColorSchema } from '../../@types/theme';
 
 // ----------------------------------------------------------------------
 
