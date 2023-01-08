@@ -1,6 +1,5 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import CssBaseline from '@mui/material/CssBaseline';
 import ThemeConfig from '../theme';
 import ThemePrimaryColor from '../components/ThemePrimaryColor';
 
