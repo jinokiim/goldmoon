@@ -11,7 +11,7 @@ export const StyledButton = styled((props: ButtonProps) => (
   letterSpacing: '-0.4px'
 });
 
-export const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+export const BorderLinearProgress = styled(LinearProgress)(({}) => ({
   height: 8,
   borderRadius: 2,
   [`&.${linearProgressClasses.colorPrimary}`]: {
