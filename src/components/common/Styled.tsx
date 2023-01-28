@@ -8,7 +8,8 @@ export const StyledButton = styled((props: ButtonProps) => (
 ))({
   fontSize: '17px',
   lineHeight: '27px',
-  letterSpacing: '-0.4px'
+  letterSpacing: '-0.4px',
+  backgroundColor: COLORS.secondary500
 });
 
 export const BorderLinearProgress = styled(LinearProgress)(({}) => ({
@@ -19,7 +20,7 @@ export const BorderLinearProgress = styled(LinearProgress)(({}) => ({
   },
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 2,
-    backgroundColor: '#33AAFF',
+    backgroundColor: COLORS.secondary500,
     animation: 'linear-translate 1s linear',
     '@keyframes linear-translate': {
       from: {
@@ -42,7 +43,7 @@ export const CustomToggleButton = styled(ToggleButton)({
   borderRadius: '20px !important',
   '&.Mui-selected, &.Mui-selected:hover': {
     color: 'rgba(255, 255, 255, 0.95)',
-    background: '#33AAFF',
+    background: COLORS.secondary500,
     border: 0
   }
 });

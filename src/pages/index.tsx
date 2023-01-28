@@ -32,7 +32,7 @@ const IndexPage: NextPage = function () {
           </Box>
           <Box sx={{ position: 'fixed', left: 20, right: 20, bottom: 20, zIndex: 2 }}>
             <StyledButton sx={{ fontWeight: 600 }} onClick={() => router.push('/pin')}>
-              입장하기
+              입 장 하 기
             </StyledButton>
           </Box>
         </Box>
