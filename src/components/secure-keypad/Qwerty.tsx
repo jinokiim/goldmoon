@@ -62,7 +62,7 @@ function handleShuffle() {
 }
 
 interface Props {
-  onSubmit: () => void;
+  onSubmit: (password: number[] | string[]) => void;
 }
 
 export default function QwertyKeypad(props: Props) {
@@ -145,7 +145,7 @@ export default function QwertyKeypad(props: Props) {
         setShowSymbols(!showSymbols);
         break;
       case KeyTypes.Submit:
-        onSubmit();
+        onSubmit(password);
         break;
       default:
         const value = (showSymbols ? symbol : shiftEnabled ? capitalize(label) : label) as string;

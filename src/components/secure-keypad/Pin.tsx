@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 
-import { Grid, Box, Typography, ButtonBase, Button } from '@mui/material';
+import { Grid, Box, Typography, ButtonBase } from '@mui/material';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import { SxProps, Theme } from '@mui/system';
 import { useTheme } from '@mui/material/styles';
 import BackspaceIcon from '@mui/icons-material/Backspace';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+// import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 // import useCustomKeypad from 'hooks/useCustomKeypad';
 // import { nativeUtil } from 'utils';
 import { shuffle } from 'lodash';
 import { COLORS } from '../../theme/palette';
 import { numpads, numpadButtons, Key, KeyTypes } from './consts';
-import useCustomKeypad from '@/src/hooks/useCustomKeypad';
+// import useCustomKeypad from '@/src/hooks/useCustomKeypad';
 // import { useLocation } from 'react-router-dom';
 // ----------------------------------------------------------------------
 
@@ -47,7 +47,9 @@ const renderIcon = (cell: Key) => {
 };
 
 interface Props {
-  onSubmit: () => void;
+  password: number[] | string[];
+  setPasswordFunc: (month: number[] | string[]) => void;
+  onSubmit: (password: any) => void;
   maxInputSize: number;
   onReset?: () => void;
   styles?: SxProps<Theme> | undefined;
@@ -55,8 +57,17 @@ interface Props {
 }
 
 export default function Keypad(props: Props) {
-  const { maxInputSize = 6, onSubmit, onReset, shouldReset, styles = {} } = props;
-  const { password, setPassword } = useCustomKeypad();
+  const {
+    password,
+    setPasswordFunc,
+    maxInputSize = 4,
+    onSubmit,
+    // onReset,
+    // shouldReset,
+    styles = {}
+  } = props;
+  // const { password, setPassword } = useCustomKeypad();
+
   const [items, setItems] = useState(() => handleShuffle(numpads));
   const [prevPassword, setPrevPassword] = useState(password);
   const theme = useTheme();
@@ -74,21 +85,19 @@ export default function Keypad(props: Props) {
       case KeyTypes.Backspace:
         if (password.length) {
           //@ts-ignore
-          setPassword((prevState) => {
+          setPasswordFunc((prevState) => {
             prevState.pop();
             return [...prevState];
           });
         }
         break;
       case KeyTypes.Submit:
-        onSubmit();
+        onSubmit(password);
         break;
       default:
         if (password.length >= maxInputSize) return;
         //@ts-ignore
-        setPassword((prevState) => {
-          return [...prevState, Number(label)];
-        });
+        setPasswordFunc([...password, Number(label)]);
     }
   }
 
@@ -109,7 +118,7 @@ export default function Keypad(props: Props) {
     <Box
       sx={{ flexGrow: 1, height: '100%', backgroundColor: theme.palette.common.white, ...styles }}
     >
-      {shouldReset && (
+      {/* {shouldReset && (
         <Box
           sx={{
             // pt: 2,
@@ -127,11 +136,16 @@ export default function Keypad(props: Props) {
             <ChevronRightIcon sx={{ color: COLORS.text600 }} />
           </Button>
         </Box>
-      )}
+      )} */}
       <Grid container columns={{ xs: 3 }} data-cy="secure-keypad">
         {itemsList.map((cell, index) => (
           <Grid item xs={1} key={index}>
-            <Item disabled={cell.type === KeyTypes.Blank} onClick={() => handleClick(cell)}>
+            <Item
+              disabled={cell.type === KeyTypes.Blank}
+              onClick={() => {
+                handleClick(cell);
+              }}
+            >
               {renderIcon(cell)}
             </Item>
           </Grid>

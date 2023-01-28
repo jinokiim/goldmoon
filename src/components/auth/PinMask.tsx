@@ -6,7 +6,7 @@ import { SxProps, Theme } from '@mui/system';
 
 interface Props extends BoxProps {
   errorMessage: string;
-  password: number[];
+  password: number[] | string[];
   maxInputSize: number;
   errorMessageStyles?: SxProps<Theme> | undefined;
 }
@@ -38,7 +38,7 @@ export default function PinMask({
                 height: '14px',
                 backgroundColor:
                   password[index] || password[index] === 0
-                    ? theme.palette.primary.main
+                    ? theme.palette.secondary.main
                     : theme.palette.info.dark,
                 borderRadius: '50px'
               }}
