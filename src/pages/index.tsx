@@ -2,11 +2,16 @@ import { NextPage } from 'next';
 import Button from '@mui/material/Button';
 
 import LayoutMain from '@/src/layouts/main';
-import { Box } from '@mui/material';
+import { BottomNavigation, Box } from '@mui/material';
 import useSettings from '@/src/hooks/useSettings';
+import GoldmoonLogo from '../assets/icons/\bgoldmoon_logo';
+import GolfMainIcon from '../assets/icons/golf_main_icon';
+import { StyledButton } from '../components/common/Styled';
+import { useRouter } from 'next/router';
 
 const IndexPage: NextPage = function () {
   const { headerHeight } = useSettings();
+  const router = useRouter();
 
   return (
     <LayoutMain
@@ -17,13 +22,20 @@ const IndexPage: NextPage = function () {
           justifyContent: 'center'
         }
       }}
-      header={<h1>header check</h1>}
+      header={<h1></h1>}
       content={
         <Box sx={{ px: 2.5, pb: 3, pt: headerHeight === 0 ? 7 : 2.5 }}>
-          <h1>하이s</h1>
-          <Button variant="contained">Contained</Button>
-          <Button variant="outlined">Outlined</Button>
-          <Button variant="outlined">이동버튼</Button>
+          <Box sx={{ textAlign: 'center' }}>
+            <Box sx={{ py: 4 }}>
+              <GolfMainIcon />
+            </Box>
+            <GoldmoonLogo />
+          </Box>
+          <Box sx={{ position: 'fixed', left: 20, right: 20, bottom: 20, zIndex: 2 }}>
+            <StyledButton sx={{ fontWeight: 600 }} onClick={() => router.push('/pin')}>
+              입장하기
+            </StyledButton>
+          </Box>
         </Box>
       }
     />
