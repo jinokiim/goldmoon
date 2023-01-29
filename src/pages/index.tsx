@@ -28,7 +28,7 @@ const IndexPage: NextPage = function () {
             <Box sx={{ py: 4 }}>
               <GolfMainIcon />
             </Box>
-            <GoldmoonLogo />
+            <GoldmoonLogo width={201} height={60} />
           </Box>
           <Box sx={{ position: 'fixed', left: 20, right: 20, bottom: 20, zIndex: 2 }}>
             <StyledButton sx={{ fontWeight: 600 }} onClick={() => router.push('/pin')}>

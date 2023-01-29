@@ -7,12 +7,12 @@ interface Props extends BoxProps {
   height?: number;
 }
 
-export default function GoldmoonLogo({ width = 105, height = 20, ...other }: Props) {
+export default function GoldmoonLogo({ width, height, ...other }: Props) {
   return (
     <Box {...other}>
       <svg
-        width="201"
-        height="60"
+        width={width}
+        height={height}
         viewBox="0 0 201 60"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
