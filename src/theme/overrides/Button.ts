@@ -49,7 +49,7 @@ export default function Button() {
           props: { variant: 'contained', size: 'large', color: 'primary' },
           style: {
             padding: '12.5px 22px',
-            backgroundColor: COLORS.primary500,
+            backgroundColor: COLORS.secondary500,
             color: COLORS.primaryContrast,
             borderRadius: 12,
             fontWeight: typography.buttonLarge.fontWeight,
@@ -57,7 +57,7 @@ export default function Button() {
             lineHeight: typography.buttonLarge.lineHeight,
             letterSpacing: typography.buttonLarge.letterSpacing,
             '&:hover': {
-              backgroundColor: COLORS.primary500
+              backgroundColor: COLORS.secondary500
             },
             '&:active': {
               background: COLORS.primaryContainedHoverBackground
@@ -81,7 +81,7 @@ export default function Button() {
             lineHeight: typography.buttonMedium.lineHeight,
             letterSpacing: typography.buttonMedium.letterSpacing,
             '&:hover': {
-              backgroundColor: COLORS.primary500
+              backgroundColor: COLORS.secondary500
             },
             '&:active': {
               background: COLORS.primaryContainedHoverBackground
@@ -105,7 +105,7 @@ export default function Button() {
             lineHeight: typography.buttonSmall.lineHeight,
             letterSpacing: typography.buttonSmall.letterSpacing,
             '&:hover': {
-              backgroundColor: COLORS.primary500
+              backgroundColor: COLORS.secondary500
             },
             '&:active': {
               background: COLORS.primaryContainedHoverBackground
