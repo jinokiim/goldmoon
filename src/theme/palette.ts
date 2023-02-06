@@ -135,7 +135,7 @@ export const COLORS = {
   secondary50: '#EFFBF8',
   secondary400: '#40E6BA',
   secondary700: '#2FA989',
-  secondary500: '#3AD1A9',
+  secondary500: '#5EA152',
   secondaryContrast: 'rgba(255, 255, 255, 0.95)',
   secondaryOutlinedRestingBorder: 'rgba(58, 209, 169, 0.5)',
   secondaryOutlinedHoverBackground: 'rgba(239, 251, 248, 1)',
