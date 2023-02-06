@@ -4,7 +4,6 @@
 import Layout from '@/src/layouts/main';
 import { Box, Paper, Stack, Typography } from '@mui/material';
 // import useSettings from '@/src/hooks/useSettings';
-import { SxProps, Theme } from '@mui/system';
 
 import { useEffect, useState } from 'react';
 
@@ -16,13 +15,6 @@ import RateUpIcon from '@/src/assets/icons/rate_up_dashboard';
 import RateDownIcon from '@/src/assets/icons/rate_down_dashboard';
 
 // ----------------------------------------------------------------------
-
-const errMsgStyles = {
-  mb: 7,
-  px: 2,
-  textAlign: 'center',
-  wordBreak: 'keep-all'
-} as SxProps<Theme>;
 
 const IndexPage = function () {
   const router = useRouter();

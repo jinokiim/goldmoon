@@ -4,28 +4,17 @@
 import Layout from '@/src/layouts/main';
 import { Box, ListItem, Typography } from '@mui/material';
 // import useSettings from '@/src/hooks/useSettings';
-import { SxProps, Theme } from '@mui/system';
 
 import { useEffect, useState } from 'react';
 
 import _ from 'lodash';
 
-import { useRouter } from 'next/router';
 import GoldmoonLogo from '@/src/assets/icons/\bgoldmoon_logo';
 import { COLORS } from '@/src/theme/palette';
 
 // ----------------------------------------------------------------------
 
-const errMsgStyles = {
-  mb: 7,
-  px: 2,
-  textAlign: 'center',
-  wordBreak: 'keep-all'
-} as SxProps<Theme>;
-
 const IndexPage = function () {
-  const router = useRouter();
-
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
