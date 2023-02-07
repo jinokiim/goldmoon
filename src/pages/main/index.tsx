@@ -17,13 +17,6 @@ import RateDownIcon from '@/src/assets/icons/rate_down_dashboard';
 
 // ----------------------------------------------------------------------
 
-const errMsgStyles = {
-  mb: 7,
-  px: 2,
-  textAlign: 'center',
-  wordBreak: 'keep-all'
-} as SxProps<Theme>;
-
 const IndexPage = function () {
   const router = useRouter();
 
@@ -38,7 +31,13 @@ const IndexPage = function () {
         header={
           <>
             <Box sx={{ textAlign: 'center', mt: 2.5 }}>
-              <GoldmoonLogo width={201} height={20} />
+              <GoldmoonLogo
+                width={201}
+                height={20}
+                onClick={() => {
+                  router.push('/main');
+                }}
+              />
             </Box>
           </>
         }

@@ -8,11 +8,16 @@ import { Box } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 import _ from 'lodash';
+import { useRouter } from 'next/router';
+import GoldmoonLogo from '@/src/assets/icons/\bgoldmoon_logo';
 
 // ----------------------------------------------------------------------
 
 const IndexPage = function () {
+  const router = useRouter();
+
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -20,7 +25,19 @@ const IndexPage = function () {
   return (
     mounted && (
       <Layout
-        header={<></>}
+        header={
+          <>
+            <Box sx={{ textAlign: 'center', mt: 2.5 }}>
+              <GoldmoonLogo
+                width={201}
+                height={20}
+                onClick={() => {
+                  router.push('/main');
+                }}
+              />
+            </Box>
+          </>
+        }
         content={
           <Box
             sx={{
