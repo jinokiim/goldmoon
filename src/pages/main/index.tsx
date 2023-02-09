@@ -13,6 +13,8 @@ import { useRouter } from 'next/router';
 import GoldmoonLogo from '@/src/assets/icons/\bgoldmoon_logo';
 import RateUpIcon from '@/src/assets/icons/rate_up_dashboard';
 import RateDownIcon from '@/src/assets/icons/rate_down_dashboard';
+import { COLORS } from '@/src/theme/palette';
+import GoldMoonMemberIcon from '@/src/assets/icons/gold_moon_member_icon';
 
 // ----------------------------------------------------------------------
 
@@ -58,8 +60,14 @@ const IndexPage = function () {
                 </StyledButton>
               </Box>
 
+              <Box sx={{ textAlign: 'right' }}>
+                <Typography variant="badgeLabelSmall" sx={{}}>
+                  00년 00월 00일 00시 기준
+                </Typography>
+              </Box>
+
               {/* 자산 */}
-              <Box sx={{ my: 2.5 }}>
+              <Box sx={{ mb: 2.5 }}>
                 <Paper
                   sx={{
                     background: '#FFFFFF',
@@ -70,9 +78,6 @@ const IndexPage = function () {
                 >
                   <Box sx={{ px: 2.5, pt: 2, display: 'flex' }}>
                     <Typography variant="h6">골드문 자산</Typography>
-                    <Typography variant="badgeLabelSmall" sx={{ ml: 12 }}>
-                      00년 00월 00일 00시 기준
-                    </Typography>
                   </Box>
                   <Box sx={{ py: 2, textAlign: 'center' }}>
                     <Typography variant="h4">20,000,000원</Typography>
@@ -96,6 +101,28 @@ const IndexPage = function () {
                   출석 & 회비납부 확인
                 </StyledButton>
               </Box>
+
+              {/* 리스트 메뉴 */}
+
+              <Box
+                sx={{
+                  backgroundColor: COLORS.backgroundDefault,
+
+                  alignItems: 'center'
+                }}
+              >
+                <Box
+                  sx={{ display: 'flex', alignItems: 'center' }}
+                  onClick={() => {
+                    router.push('/main/members');
+                  }}
+                >
+                  <GoldMoonMemberIcon />
+                  <Typography variant="h6">골드문 멤버 보기</Typography>
+                </Box>
+              </Box>
+
+              {/*  */}
             </Box>
           </Box>
         }

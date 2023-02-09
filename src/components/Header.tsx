@@ -21,6 +21,8 @@ import PlusIcon from '../assets/icons/plus';
 import FAQButton from '../assets/icons/fn_qa_btn';
 import RefreshIcon from '../assets/icons/refresh_icon_dashboard';
 import MoreIconHeader from '../assets/icons/more_icon_header';
+import GoldmoonLogo from '../assets/icons/\bgoldmoon_logo';
+import { useRouter } from 'next/router';
 
 // ----------------------------------------------------------------------
 
@@ -64,7 +66,7 @@ export default function AppHeader(props: Props): ReactElement {
     titleAlign = 'center',
     leftPos = '0',
     minHeight = '44px',
-    // showLogo = false,
+    showLogo,
     onPrev,
     onPrevText,
     onLogout,
@@ -89,6 +91,8 @@ export default function AppHeader(props: Props): ReactElement {
     subTitle,
     clickText
   } = props;
+
+  const router = useRouter();
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -131,6 +135,18 @@ export default function AppHeader(props: Props): ReactElement {
           }}
         >
           <Typography variant="h6">{onPrevText}</Typography>
+        </Box>
+      )}
+
+      {showLogo && (
+        <Box sx={{ textAlign: 'center', mt: 2.5 }}>
+          <GoldmoonLogo
+            width={201}
+            height={20}
+            onClick={() => {
+              router.push('/main');
+            }}
+          />
         </Box>
       )}
 
