@@ -10,12 +10,13 @@ import { useEffect, useState } from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 
-import memberData from './data/membersData.json';
 import { COLORS } from '@/src/theme/palette';
 import dynamic from 'next/dynamic';
 import AppHeader from '@/src/components/Header';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
+import { ApexOptions } from 'apexcharts';
+import { members, totalMembers } from '@/src/data/membersData';
 
 // ----------------------------------------------------------------------
 
@@ -54,7 +55,7 @@ const IndexPage = function () {
   };
 
   useEffect(() => {
-    sortMemberDataFunc(memberData);
+    sortMemberDataFunc(members);
   }, []);
 
   return (
@@ -84,14 +85,14 @@ const IndexPage = function () {
                 <Typography variant="h5">
                   골드문 멤버는{' '}
                   <Box component="span" color={COLORS.secondary500}>
-                    {memberData.length}
+                    {members.length}
                   </Box>
                   명 이에요
                 </Typography>
               </Box>
               <Box>
                 <Chart
-                  options={state.options}
+                  options={options}
                   series={state.series}
                   type="line"
                   width="100%"
@@ -137,39 +138,36 @@ const IndexPage = function () {
 
 export default IndexPage;
 
-const state = {
-  options: {
-    legend: { show: false, horizontalAlign: 'center', position: 'bottom' },
-    grid: {
-      xaxis: {
-        lines: {
-          show: false
-        }
-      },
-      yaxis: {
-        lines: {
-          show: false
-        }
-      }
-    },
-    chart: {
-      id: 'basic-bar',
-      toolbar: {
-        show: false
-      }
-    },
+const options: ApexOptions = {
+  legend: { show: false, horizontalAlign: 'center', position: 'bottom' },
+  grid: {
     xaxis: {
       lines: {
         show: false
-      },
-      tickPlacement: 'between',
-      categories: ['22.07', '22.08', '22.09', '22.10', '22.11', '22.12', '23.01', '23.02']
+      }
+    },
+    yaxis: {
+      lines: {
+        show: false
+      }
     }
   },
+  chart: {
+    id: 'basic-bar',
+    toolbar: {
+      show: false
+    }
+  },
+  xaxis: {
+    tickPlacement: 'between',
+    categories: ['22.07', '22.08', '22.09', '22.10', '22.11', '22.12', '23.01', '23.02']
+  }
+};
+const state = {
   series: [
     {
       name: '회원 수',
-      data: [37, 40, 39, 41, 40, 42, 50, 45]
+      data: totalMembers
     }
   ]
 };
