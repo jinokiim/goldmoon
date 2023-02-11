@@ -46,11 +46,12 @@ const IndexPage = function () {
   const [sortedMembers, setSortedMembers] = useState<memberType[]>([]);
 
   const sortMemberDataFunc = (memberData: memberType[]) => {
-    const test = memberData.sort((firstObject: memberType, secondObject: memberType) =>
+    const filterByStatus = memberData.filter((member) => member.is_status === 'y');
+    const newMembers = filterByStatus.sort((firstObject: memberType, secondObject: memberType) =>
       firstObject.name > secondObject.name ? 1 : -1
     );
 
-    setSortedMembers(test);
+    setSortedMembers(newMembers);
     setMounted(true);
   };
 
@@ -85,7 +86,6 @@ const IndexPage = function () {
                 <Typography variant="h5">
                   골드문 멤버는{' '}
                   <Box component="span" color={COLORS.secondary500}>
-                    {/* TODO: status y인 멤버들만 filter해서 넣기 */}
                     {members.length}
                   </Box>
                   명 이에요
