@@ -85,6 +85,7 @@ const IndexPage = function () {
                 <Typography variant="h5">
                   골드문 멤버는{' '}
                   <Box component="span" color={COLORS.secondary500}>
+                    {/* TODO: status y인 멤버들만 filter해서 넣기 */}
                     {members.length}
                   </Box>
                   명 이에요
