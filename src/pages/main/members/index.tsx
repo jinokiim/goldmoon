@@ -64,7 +64,7 @@ const IndexPage = function () {
       <Layout
         header={
           <>
-            <AppHeader onPrev={() => router.push('/main')} />
+            <AppHeader onPrev={() => router.push('/main')} onPrevText={'골드문 멤버'} />
           </>
         }
         content={

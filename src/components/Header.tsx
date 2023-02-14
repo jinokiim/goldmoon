@@ -21,7 +21,7 @@ import PlusIcon from '../assets/icons/plus';
 import FAQButton from '../assets/icons/fn_qa_btn';
 import RefreshIcon from '../assets/icons/refresh_icon_dashboard';
 import MoreIconHeader from '../assets/icons/more_icon_header';
-import GoldmoonLogo from '../assets/icons/\bgoldmoon_logo';
+import GoldmoonLogo from '../assets/icons/goldmoon_logo';
 import { useRouter } from 'next/router';
 
 // ----------------------------------------------------------------------
