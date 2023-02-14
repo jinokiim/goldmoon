@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import LayoutMain from '@/src/layouts/main';
 import { Box } from '@mui/material';
 import useSettings from '@/src/hooks/useSettings';
-import GoldmoonLogo from '../assets/icons/\bgoldmoon_logo';
+import GoldmoonLogo from '../assets/icons/goldmoon_logo';
 import GolfMainIcon from '../assets/icons/golf_main_icon';
 import { StyledButton } from '../components/common/Styled';
 import { useRouter } from 'next/router';
