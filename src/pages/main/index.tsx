@@ -2,14 +2,14 @@
 
 // import Button from '@mui/material/Button';
 import Layout from '@/src/layouts/main';
-import { Box, Paper, Stack, Typography } from '@mui/material';
+import { Box, ButtonBase, Paper, Stack, SxProps, Typography } from '@mui/material';
 // import useSettings from '@/src/hooks/useSettings';
 
 import { useEffect, useState } from 'react';
 
 import _ from 'lodash';
 import { StyledButton } from '@/src/components/common/Styled';
-import { useRouter } from 'next/router';
+import router, { useRouter } from 'next/router';
 import GoldmoonLogo from '@/src/assets/icons/goldmoon_logo';
 import RateUpIcon from '@/src/assets/icons/rate_up_dashboard';
 import RateDownIcon from '@/src/assets/icons/rate_down_dashboard';
@@ -19,6 +19,68 @@ import { financialLastUpdated, financialNow } from '@/src/data/financialData';
 // import { formatter } from '../api/function';
 
 // ----------------------------------------------------------------------
+
+const menuIcon: SxProps = {
+  objectFit: 'contain',
+  width: 48,
+  height: 48,
+  backgroundSize: '100%',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  transitionDuration: '0.5s',
+  '&:hover': {}
+};
+const detailMenuStyle: SxProps = {
+  width: '33%',
+  textAlign: 'center',
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+  marginBottom: '32px',
+  marginTop: '8px'
+};
+
+const menuLists = [
+  {
+    title: '멤버',
+    url: 'members',
+    icon: (
+      <Box className="GoldmoonIcon" sx={{ ...menuIcon }}>
+        <GoldMoonMemberIcon />
+      </Box>
+    )
+  },
+  {
+    title: '팀짜기',
+    icon: (
+      <Box
+        className="GoldmoonIcon"
+        sx={{
+          ...menuIcon,
+          backgroundImage: "url('/static/icons/Icon_loan.png')"
+        }}
+      />
+    )
+  },
+  {
+    title: '정산하기',
+    icon: (
+      <Box
+        className="GoldmoonIcon"
+        sx={{ ...menuIcon, backgroundImage: "url('/static/icons/Icon_stockloan.png')" }}
+      />
+    )
+  },
+  {
+    title: '정보',
+    icon: (
+      <Box
+        className="GoldmoonIcon"
+        sx={{ ...menuIcon, backgroundImage: "url('/static/icons/Icon_card.png')" }}
+      />
+    )
+  }
+];
 
 const IndexPage = function () {
   const router = useRouter();
@@ -49,7 +111,6 @@ const IndexPage = function () {
           <Box
             sx={{
               pt: 7,
-              px: 2,
               height: '100%',
               display: 'flex',
               flexDirection: 'column',
@@ -57,80 +118,98 @@ const IndexPage = function () {
             }}
           >
             <Box sx={{ height: '100%' }}>
-              <Box sx={{ mb: 2.5 }}>
-                <StyledButton sx={{ fontWeight: 600 }} onClick={() => router.push('/main/notice')}>
-                  공 지 사 항
-                </StyledButton>
-              </Box>
-
-              {/* 자산 */}
-              <Box sx={{ mb: 2.5 }}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', pb: 0.5, px: 0.5 }}>
-                  <Typography variant="badgeLabelSmall">{financialLastUpdated} 기준</Typography>
-                  <Typography
-                    variant="badgeLabelSmall"
-                    onClick={() => {
-                      router.push('/main/financial/history');
-                    }}
+              <Box sx={{ px: 2.5 }}>
+                <Box sx={{ mb: 2.5 }}>
+                  <StyledButton
+                    sx={{ fontWeight: 600 }}
+                    onClick={() => router.push('/main/notice')}
                   >
-                    어디에 썼을까요? &gt;
-                  </Typography>
+                    공 지 사 항
+                  </StyledButton>
                 </Box>
-                <Paper
-                  sx={{
-                    background: '#FFFFFF',
-                    border: '1px solid #DDE4EE',
-                    boxSizing: 'border-box',
-                    borderRadius: '12px'
-                  }}
-                >
-                  <Box sx={{ px: 2.5, pt: 2, display: 'flex' }}>
-                    <Typography variant="h6">골드문 자산</Typography>
-                  </Box>
-                  <Box sx={{ py: 2, textAlign: 'center' }}>
-                    <Typography variant="h4">
-                      {Number(financialNow.total).toLocaleString()}원
+
+                {/* 자산 */}
+                <Box sx={{ mb: 2.5 }}>
+                  <Box sx={{ display: 'flex', justifyContent: 'space-between', pb: 0.5, px: 0.5 }}>
+                    <Typography variant="badgeLabelSmall">{financialLastUpdated} 기준</Typography>
+                    <Typography
+                      variant="badgeLabelSmall"
+                      onClick={() => {
+                        router.push('/main/financial/history');
+                      }}
+                    >
+                      어디에 썼을까요? &gt;
                     </Typography>
                   </Box>
-                  <Box sx={{ pb: 2, px: 2.5 }}>
-                    <Stack direction="row" alignItems="center" justifyContent="center">
-                      <UpDownPrice state="UP" amount={financialNow.income} />
-                      <Box sx={{ mx: 8 }} />
-                      <UpDownPrice state="DOWN" amount={financialNow.spending} />
-                    </Stack>
-                  </Box>
-                </Paper>
-              </Box>
-
-              {/* 출석 & 회비납부 확인 */}
-              <Box sx={{ mb: 2.5 }}>
-                <StyledButton
-                  sx={{ fontWeight: 600 }}
-                  onClick={() => router.push('/main/attendance')}
-                >
-                  출석 & 회비납부 확인
-                </StyledButton>
-              </Box>
-
-              {/* 리스트 메뉴 */}
-              <Box
-                sx={{
-                  backgroundColor: COLORS.backgroundDefault,
-                  alignItems: 'center'
-                }}
-              >
-                <Box
-                  sx={{ display: 'flex', alignItems: 'center' }}
-                  onClick={() => {
-                    router.push('/main/members');
-                  }}
-                >
-                  <GoldMoonMemberIcon />
-                  <Typography variant="h6">골드문 멤버 보기</Typography>
+                  <Paper
+                    sx={{
+                      background: '#FFFFFF',
+                      border: '1px solid #DDE4EE',
+                      boxSizing: 'border-box',
+                      borderRadius: '12px'
+                    }}
+                  >
+                    <Box sx={{ px: 2.5, pt: 2, display: 'flex' }}>
+                      <Typography variant="h6">골드문 자산</Typography>
+                    </Box>
+                    <Box sx={{ py: 2, textAlign: 'center' }}>
+                      <Typography variant="h4">
+                        {Number(financialNow.total).toLocaleString()}원
+                      </Typography>
+                    </Box>
+                    <Box sx={{ pb: 2, px: 2.5 }}>
+                      <Stack direction="row" alignItems="center" justifyContent="center">
+                        <UpDownPrice state="UP" amount={financialNow.income} />
+                        <Box sx={{ mx: 8 }} />
+                        <UpDownPrice state="DOWN" amount={financialNow.spending} />
+                      </Stack>
+                    </Box>
+                  </Paper>
+                </Box>
+                {/* 출석 & 회비납부 확인 */}
+                <Box sx={{ mb: 4.5 }}>
+                  <StyledButton
+                    sx={{ fontWeight: 600 }}
+                    onClick={() => router.push('/main/attendance')}
+                  >
+                    출석 & 회비납부 확인
+                  </StyledButton>
                 </Box>
               </Box>
 
-              {/*  */}
+              <Box
+                sx={{
+                  height: 12,
+                  backgroundColor: '#F5F6F9',
+                  mb: 2.5
+                }}
+              />
+              {/* 리스트 메뉴 */}
+
+              <Typography
+                variant="h2"
+                color={COLORS.secondary500}
+                sx={{
+                  background: COLORS.white,
+                  height: '38px',
+                  px: 2.5,
+                  marginTop: '-1px', //safari issue
+                  marginBottom: '-1.5px' //safari issue
+                }}
+              >
+                메뉴
+              </Typography>
+              <Box
+                sx={{
+                  mx: '20px',
+                  py: 4,
+                  paddingTop: '24px',
+                  display: 'flex',
+                  flexWrap: 'wrap'
+                }}
+              >
+                {menuBox}
+              </Box>
             </Box>
           </Box>
         }
@@ -138,6 +217,36 @@ const IndexPage = function () {
     )
   );
 };
+
+const menuBox = menuLists.map((menu, index) => (
+  <ButtonBase
+    disableRipple
+    key={index}
+    sx={{
+      ...detailMenuStyle,
+      '&:hover .MarketIcon': {
+        width: 52,
+        height: 52,
+        backgroundSize: '110%'
+      }
+    }}
+    onClick={() => {
+      router.push(`/main/${menu.url}`);
+    }}
+  >
+    <Box
+      sx={{
+        width: 48,
+        height: 48
+      }}
+    >
+      {menu.icon}
+    </Box>
+    <Typography sx={{ mt: '8px' }} variant="body2" color={COLORS.text600}>
+      {menu.title}
+    </Typography>
+  </ButtonBase>
+));
 
 interface upDownPriceProps {
   state: string;
