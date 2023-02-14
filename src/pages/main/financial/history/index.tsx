@@ -45,17 +45,6 @@ const IndexPage = function () {
           >
             <Box sx={{ height: '100%' }}>
               <Box sx={{ px: 0.5 }}>
-                {/* <PaymentList
-                item={{
-                  description: item.merchant_name,
-                  value: item.approved_amt,
-                  date: item.approved_dtime,
-                  descriptionMore: item.memo,
-                  currencyCode: item.currency_code,
-                  canceled: item.status === '02'
-                }}
-              /> */}
-
                 {financialHistory?.map((item, index) => (
                   <>
                     <Box key={index}>
@@ -104,31 +93,3 @@ const IndexPage = function () {
 };
 
 export default IndexPage;
-
-export function PaymentList() {
-  return (
-    <>
-      <Stack direction="row" justifyContent="space-between">
-        <Typography
-          variant="body1"
-          sx={{
-            fontWeight: 400,
-            maxWidth: 200,
-            overflow: 'hidden',
-            whiteSpace: 'nowrap'
-          }}
-          textOverflow="ellipsis"
-        >
-          {'가게 정보 '}
-        </Typography>
-        <Typography variant="body1" sx={{ fontWeight: 400 }}>
-          8972403 원
-        </Typography>
-      </Stack>
-      <Typography variant="body2" sx={{ color: COLORS.text600, mt: '2px', mb: 1.5 }}>
-        2023년 00월 00일
-      </Typography>
-      <Divider sx={{ my: 2 }} />
-    </>
-  );
-}
