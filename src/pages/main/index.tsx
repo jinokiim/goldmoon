@@ -10,16 +10,19 @@ import { useEffect, useState } from 'react';
 import _ from 'lodash';
 import { StyledButton } from '@/src/components/common/Styled';
 import { useRouter } from 'next/router';
-import GoldmoonLogo from '@/src/assets/icons/\bgoldmoon_logo';
+import GoldmoonLogo from '@/src/assets/icons/goldmoon_logo';
 import RateUpIcon from '@/src/assets/icons/rate_up_dashboard';
 import RateDownIcon from '@/src/assets/icons/rate_down_dashboard';
 import { COLORS } from '@/src/theme/palette';
 import GoldMoonMemberIcon from '@/src/assets/icons/gold_moon_member_icon';
+import { financialLastUpdated, financialNow } from '@/src/data/financialData';
+// import { formatter } from '../api/function';
 
 // ----------------------------------------------------------------------
 
 const IndexPage = function () {
   const router = useRouter();
+  // const date = new Date();
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -60,14 +63,19 @@ const IndexPage = function () {
                 </StyledButton>
               </Box>
 
-              <Box sx={{ textAlign: 'right' }}>
-                <Typography variant="badgeLabelSmall" sx={{}}>
-                  00년 00월 00일 00시 기준
-                </Typography>
-              </Box>
-
               {/* 자산 */}
               <Box sx={{ mb: 2.5 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', pb: 0.5, px: 0.5 }}>
+                  <Typography variant="badgeLabelSmall">{financialLastUpdated} 기준</Typography>
+                  <Typography
+                    variant="badgeLabelSmall"
+                    onClick={() => {
+                      router.push('/main/financial/history');
+                    }}
+                  >
+                    어디에 썼을까요? &gt;
+                  </Typography>
+                </Box>
                 <Paper
                   sx={{
                     background: '#FFFFFF',
@@ -80,13 +88,15 @@ const IndexPage = function () {
                     <Typography variant="h6">골드문 자산</Typography>
                   </Box>
                   <Box sx={{ py: 2, textAlign: 'center' }}>
-                    <Typography variant="h4">20,000,000원</Typography>
+                    <Typography variant="h4">
+                      {Number(financialNow.total).toLocaleString()}원
+                    </Typography>
                   </Box>
                   <Box sx={{ pb: 2, px: 2.5 }}>
                     <Stack direction="row" alignItems="center" justifyContent="center">
-                      <UpDownPrice state="UP" text={230000} />
+                      <UpDownPrice state="UP" amount={financialNow.income} />
                       <Box sx={{ mx: 8 }} />
-                      <UpDownPrice state="DOWN" text={140000} />
+                      <UpDownPrice state="DOWN" amount={financialNow.spending} />
                     </Stack>
                   </Box>
                 </Paper>
@@ -103,11 +113,9 @@ const IndexPage = function () {
               </Box>
 
               {/* 리스트 메뉴 */}
-
               <Box
                 sx={{
                   backgroundColor: COLORS.backgroundDefault,
-
                   alignItems: 'center'
                 }}
               >
@@ -133,11 +141,11 @@ const IndexPage = function () {
 
 interface upDownPriceProps {
   state: string;
-  text: number;
+  amount: string;
 }
 
 export const UpDownPrice = (props: upDownPriceProps) => {
-  const { state, text } = props;
+  const { state, amount } = props;
   return (
     <>
       {state === 'UP' ? <RateUpIcon sx={{ mt: -0.4 }} /> : <RateDownIcon sx={{ mt: -0.4 }} />}
@@ -149,7 +157,7 @@ export const UpDownPrice = (props: upDownPriceProps) => {
           pb: 0.3
         }}
       >
-        {text} 원
+        {Number(amount).toLocaleString()}원
       </Typography>
     </>
   );
