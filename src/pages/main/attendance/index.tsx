@@ -227,21 +227,21 @@ const IndexPage = function () {
                             </Typography>
                             {
                               /* @ts-ignore */
-                              item.membership_fee[period.membershipFee.a.year][
-                                period.membershipFee.a.month - 1
+                              item.membership_fee[period.membershipFee.b.year][
+                                period.membershipFee.b.month - 1
                               ] === '1' ? (
                                 <CheckGreenIcon />
                               ) : /* @ts-ignore */
-                              item.membership_fee[period.membershipFee.a.year][
-                                  period.membershipFee.a.month - 1
+                              item.membership_fee[period.membershipFee.b.year][
+                                  period.membershipFee.b.month - 1
                                 ] === '0' ? (
                                 <XIcon />
                               ) : (
                                 <Typography variant="body1" sx={{ height: 50 }}>
                                   {
                                     /* @ts-ignore */
-                                    item.membership_fee[period.membershipFee.a.year][
-                                      period.membershipFee.a.month - 1
+                                    item.membership_fee[period.membershipFee.b.year][
+                                      period.membershipFee.b.month - 1
                                     ]
                                   }
                                 </Typography>
@@ -255,21 +255,21 @@ const IndexPage = function () {
                             </Typography>
                             {
                               /* @ts-ignore */
-                              item.membership_fee[period.membershipFee.a.year][
-                                period.membershipFee.a.month - 1
+                              item.membership_fee[period.membershipFee.c.year][
+                                period.membershipFee.c.month - 1
                               ] === '1' ? (
                                 <CheckGreenIcon />
                               ) : /* @ts-ignore */
-                              item.membership_fee[period.membershipFee.a.year][
-                                  period.membershipFee.a.month - 1
+                              item.membership_fee[period.membershipFee.c.year][
+                                  period.membershipFee.c.month - 1
                                 ] === '0' ? (
                                 <XIcon />
                               ) : (
                                 <Typography variant="body1" sx={{ height: 50 }}>
                                   {
                                     /* @ts-ignore */
-                                    item.membership_fee[period.membershipFee.a.year][
-                                      period.membershipFee.a.month - 1
+                                    item.membership_fee[period.membershipFee.c.year][
+                                      period.membershipFee.c.month - 1
                                     ]
                                   }
                                 </Typography>
