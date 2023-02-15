@@ -2,7 +2,7 @@
 
 // import Button from '@mui/material/Button';
 import Layout from '@/src/layouts/main';
-import { Box, Button, InputBase, InputProps, Paper, Stack, Typography } from '@mui/material';
+import { Box, InputBase, InputProps, Paper, Stack, Typography } from '@mui/material';
 // import useSettings from '@/src/hooks/useSettings';
 
 import { ChangeEvent, useEffect, useMemo, useState } from 'react';
@@ -18,23 +18,10 @@ import { COLORS } from '@/src/theme/palette';
 import EmptySearchIcon from '@/src/assets/icons/empty_search_icon';
 
 import { members } from '@/src/data/membersData';
-import CheckCircle from '@/src/assets/icons/check_circle';
 import CheckGreenIcon from '@/src/assets/icons/check_green';
 import XIcon from '@/src/assets/icons/x_icon';
 
 // ----------------------------------------------------------------------
-
-interface MemberType {
-  id: string;
-  name: string;
-  gender: string;
-  birth: string;
-  attendance: { '2022': string[]; '2023': string[] };
-  membership_fee: { '2022': string[]; '2023': string[] };
-  reg_date: string;
-  bird: string;
-  is_status: string;
-}
 
 const IndexPage = function () {
   const router = useRouter();
@@ -44,7 +31,7 @@ const IndexPage = function () {
 
   const [mounted, setMounted] = useState(false);
   const [search, setSearch] = useState<string>('');
-  const [period, setPeriod] = useState({
+  const [period] = useState({
     attendance: {
       a: {
         year: nowMonth === 1 || nowMonth === 2 ? nowYear - 1 : nowYear,
