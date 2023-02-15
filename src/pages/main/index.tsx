@@ -14,8 +14,10 @@ import GoldmoonLogo from '@/src/assets/icons/goldmoon_logo';
 import RateUpIcon from '@/src/assets/icons/rate_up_dashboard';
 import RateDownIcon from '@/src/assets/icons/rate_down_dashboard';
 import { COLORS } from '@/src/theme/palette';
-import GoldMoonMemberIcon from '@/src/assets/icons/gold_moon_member_icon';
+import GoldMoonMemberIcon from '@/src/assets/menu/gold_moon_member_icon';
 import { financialLastUpdated, financialNow } from '@/src/data/financialData';
+import EmptyMenu from '@/src/assets/menu/empty_menu_icon';
+import MakeTeam from '@/src/assets/menu/make_team_icon';
 // import { formatter } from '../api/function';
 
 // ----------------------------------------------------------------------
@@ -52,32 +54,29 @@ const menuLists = [
   },
   {
     title: '팀짜기',
+    url: 'organize',
     icon: (
-      <Box
-        className="GoldmoonIcon"
-        sx={{
-          ...menuIcon,
-          backgroundImage: "url('/static/icons/Icon_loan.png')"
-        }}
-      />
+      <Box className="GoldmoonIcon" sx={{ ...menuIcon }}>
+        <MakeTeam />
+      </Box>
     )
   },
   {
     title: '정산하기',
+    url: 'empty',
     icon: (
-      <Box
-        className="GoldmoonIcon"
-        sx={{ ...menuIcon, backgroundImage: "url('/static/icons/Icon_stockloan.png')" }}
-      />
+      <Box className="GoldmoonIcon" sx={{ ...menuIcon }}>
+        <EmptyMenu />
+      </Box>
     )
   },
   {
     title: '정보',
+    url: 'empty',
     icon: (
-      <Box
-        className="GoldmoonIcon"
-        sx={{ ...menuIcon, backgroundImage: "url('/static/icons/Icon_card.png')" }}
-      />
+      <Box className="GoldmoonIcon" sx={{ ...menuIcon }}>
+        <EmptyMenu />
+      </Box>
     )
   }
 ];
