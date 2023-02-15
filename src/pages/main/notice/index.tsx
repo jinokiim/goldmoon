@@ -73,7 +73,7 @@ const MainNotice = () => {
       <Box sx={{ mt: 2, mb: 5.5 }}>
         <Box sx={{ mb: 1.5 }}>
           <Typography variant="h6" fontWeight="700">
-            <Box component="span" sx={{ color: COLORS.secondary500, fontWeight: 900 }}>
+            <Box component="span" sx={{ color: COLORS.secondary700, fontWeight: 900 }}>
               규칙
             </Box>
             에 대해 알려드려요
@@ -122,7 +122,7 @@ const MainNotice = () => {
       <Box sx={{ mt: 2, mb: 5.5 }}>
         <Box sx={{ mb: 1.5 }}>
           <Typography variant="h6">
-            <Box component="span" sx={{ color: COLORS.secondary500, fontWeight: 900 }}>
+            <Box component="span" sx={{ color: COLORS.secondary700, fontWeight: 900 }}>
               정모에
             </Box>{' '}
             관한 내용이에요
@@ -156,7 +156,7 @@ const MainNotice = () => {
       <Box sx={{ mt: 2, mb: 5.5 }}>
         <Box sx={{ mb: 1.5 }}>
           <Typography variant="h6">
-            <Box component="span" sx={{ color: COLORS.secondary500, fontWeight: 900 }}>
+            <Box component="span" sx={{ color: COLORS.secondary700, fontWeight: 900 }}>
               회비
             </Box>
             에 관한 내용이에요
@@ -190,7 +190,7 @@ const MainNotice = () => {
         <Box sx={{ mb: 1.5 }}>
           <Typography variant="h6">
             다음은{' '}
-            <Box component="span" sx={{ color: COLORS.secondary500, fontWeight: 900 }}>
+            <Box component="span" sx={{ color: COLORS.secondary700, fontWeight: 900 }}>
               강퇴
             </Box>{' '}
             기준이에요

@@ -66,7 +66,7 @@ const IndexPage = function () {
                           sx={{
                             fontWeight: item.condition === 'income' ? 600 : 400,
                             color:
-                              item.condition === 'income' ? COLORS.secondary500 : COLORS.text900
+                              item.condition === 'income' ? COLORS.secondary700 : COLORS.text900
                           }}
                         >
                           {item.condition === 'spending' && '-'}

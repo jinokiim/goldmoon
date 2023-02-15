@@ -187,7 +187,7 @@ const IndexPage = function () {
 
               <Typography
                 variant="h2"
-                color={COLORS.secondary500}
+                color={COLORS.secondary700}
                 sx={{
                   background: COLORS.white,
                   height: '38px',

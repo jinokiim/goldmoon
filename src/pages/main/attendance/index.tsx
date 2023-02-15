@@ -74,7 +74,7 @@ const IndexPage = function () {
             ?.map((item, index) => (
               <Box key={index} sx={{ px: 2.5 }}>
                 <Typography variant="h4">
-                  <Box component="span" sx={{ color: COLORS.secondary500 }}>
+                  <Box component="span" sx={{ color: COLORS.secondary700 }}>
                     {item.name}
                   </Box>
                   님의 출석 & 회비 납부 현황이에요

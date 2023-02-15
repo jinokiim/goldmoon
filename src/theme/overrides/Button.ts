@@ -49,7 +49,7 @@ export default function Button() {
           props: { variant: 'contained', size: 'large', color: 'primary' },
           style: {
             padding: '12.5px 22px',
-            backgroundColor: COLORS.secondary500,
+            backgroundColor: COLORS.secondary700,
             color: COLORS.primaryContrast,
             borderRadius: 12,
             fontWeight: typography.buttonLarge.fontWeight,
@@ -57,7 +57,7 @@ export default function Button() {
             lineHeight: typography.buttonLarge.lineHeight,
             letterSpacing: typography.buttonLarge.letterSpacing,
             '&:hover': {
-              backgroundColor: COLORS.secondary500
+              backgroundColor: COLORS.secondary700
             },
             '&:active': {
               background: COLORS.primaryContainedHoverBackground
@@ -81,7 +81,7 @@ export default function Button() {
             lineHeight: typography.buttonMedium.lineHeight,
             letterSpacing: typography.buttonMedium.letterSpacing,
             '&:hover': {
-              backgroundColor: COLORS.secondary500
+              backgroundColor: COLORS.secondary700
             },
             '&:active': {
               background: COLORS.primaryContainedHoverBackground
@@ -105,7 +105,7 @@ export default function Button() {
             lineHeight: typography.buttonSmall.lineHeight,
             letterSpacing: typography.buttonSmall.letterSpacing,
             '&:hover': {
-              backgroundColor: COLORS.secondary500
+              backgroundColor: COLORS.secondary700
             },
             '&:active': {
               background: COLORS.primaryContainedHoverBackground
@@ -423,7 +423,7 @@ export default function Button() {
             padding: '12.5px 22px',
             border: '1px solid rgba(58, 209, 169, 0.5)',
             backgroundColor: 'transparent',
-            color: COLORS.secondary500,
+            color: COLORS.secondary700,
             borderRadius: 12,
             fontWeight: typography.buttonLarge.fontWeight,
             fontSize: typography.buttonLarge.fontSize,
@@ -451,7 +451,7 @@ export default function Button() {
             padding: '6px 16px',
             border: '1px solid rgba(58, 209, 169, 0.5)',
             backgroundColor: 'transparent',
-            color: COLORS.secondary500,
+            color: COLORS.secondary700,
             borderRadius: 8,
             fontWeight: typography.buttonMedium.fontWeight,
             fontSize: typography.buttonMedium.fontSize,
@@ -479,7 +479,7 @@ export default function Button() {
             padding: '5px 12px',
             border: '1px solid rgba(58, 209, 169, 0.5)',
             backgroundColor: 'transparent',
-            color: COLORS.secondary500,
+            color: COLORS.secondary700,
             borderRadius: 6,
             fontWeight: typography.buttonSmall.fontWeight,
             fontSize: typography.buttonSmall.fontSize,
@@ -662,7 +662,7 @@ export default function Button() {
           style: {
             padding: '12.5px 22px',
             backgroundColor: 'transparent',
-            color: COLORS.secondary500,
+            color: COLORS.secondary700,
             borderRadius: 12,
             fontWeight: typography.buttonLarge.fontWeight,
             fontSize: typography.buttonLarge.fontSize,
@@ -686,7 +686,7 @@ export default function Button() {
           style: {
             padding: '6px 16px',
             backgroundColor: 'transparent',
-            color: COLORS.secondary500,
+            color: COLORS.secondary700,
             borderRadius: 8,
             fontWeight: typography.buttonMedium.fontWeight,
             fontSize: typography.buttonMedium.fontSize,
@@ -710,7 +710,7 @@ export default function Button() {
           style: {
             padding: '5px 12px',
             backgroundColor: 'transparent',
-            color: COLORS.secondary500,
+            color: COLORS.secondary700,
             borderRadius: 6,
             fontWeight: typography.buttonSmall.fontWeight,
             fontSize: typography.buttonSmall.fontSize,
