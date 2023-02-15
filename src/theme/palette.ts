@@ -130,7 +130,7 @@ export const COLORS = {
   // gradient: 'linear-gradient(134.03deg, #2E9BFF 0.4%, #3AD1A9 103.19%)'
   primaryOutlinedRestingBorder: 'rgba(46, 155, 255, 0.5)',
   primaryOutlinedHoverBackground: 'rgba(235, 245, 255, 1)',
-  primaryContainedHoverBackground: `linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #2E9BFF`,
+  primaryContainedHoverBackground: `linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #2FA989`,
   // ------------------------------------------ SECONDARY ------------------------------------------
   secondary50: '#EFFBF8',
   secondary400: '#40E6BA',

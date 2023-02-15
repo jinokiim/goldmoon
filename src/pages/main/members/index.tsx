@@ -85,7 +85,7 @@ const IndexPage = function () {
                 </Typography>
                 <Typography variant="h5">
                   골드문 멤버는{' '}
-                  <Box component="span" color={COLORS.secondary500}>
+                  <Box component="span" color={COLORS.secondary700}>
                     {members.length}
                   </Box>
                   명 이에요

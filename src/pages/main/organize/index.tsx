@@ -2,7 +2,7 @@
 
 // import Button from '@mui/material/Button';
 import Layout from '@/src/layouts/main';
-import { Box } from '@mui/material';
+import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 // import useSettings from '@/src/hooks/useSettings';
 
 import { useEffect, useState } from 'react';
@@ -12,6 +12,10 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { StyledButton } from '@/src/components/common/Styled';
 import AppHeader from '@/src/components/Header';
+import { COLORS } from '@/src/theme/palette';
+import Card from '@/src/components/Card';
+import MakeTeam from '@/src/assets/menu/make_team_icon';
+import { FirstStep } from '@/src/components/organize/FirstStep';
 
 // ----------------------------------------------------------------------
 
@@ -33,11 +37,9 @@ const IndexPage = function () {
         }
         content={
           <Box sx={{ mt: 8, textAlign: 'center' }}>
-            <Box sx={{ px: 2.5, mb: 10 }}>
-              <StyledButton sx={{ fontWeight: 600 }} onClick={() => router.push('/main')}>
-                메인으로 이동
-              </StyledButton>
-            </Box>
+            {/*  */}
+            <FirstStep />
+            {/*  */}
           </Box>
         }
       />
