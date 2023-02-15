@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import Card from '../Card';
@@ -6,10 +6,10 @@ import { COLORS } from '@/src/theme/palette';
 import MakeTeam from '@/src/assets/menu/make_team_icon';
 
 //--------------------------------------------------------------------------
-enum OrganizeType {
-  RANDOM = 'random',
-  BALANCE = 'balance'
-}
+// enum OrganizeType {
+//   RANDOM = 'random',
+//   BALANCE = 'balance'
+// }
 
 const OrganizeState = ['random', 'balance'];
 
