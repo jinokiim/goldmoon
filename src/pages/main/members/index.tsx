@@ -20,7 +20,7 @@ import { members, totalMembers } from '@/src/data/membersData';
 
 // ----------------------------------------------------------------------
 
-interface memberType {
+export interface memberType {
   id: string;
   name: string;
   gender: string;
@@ -86,7 +86,7 @@ const IndexPage = function () {
                 <Typography variant="h5">
                   골드문 멤버는{' '}
                   <Box component="span" color={COLORS.secondary700}>
-                    {members.length}
+                    {sortedMembers.length}
                   </Box>
                   명 이에요
                 </Typography>
