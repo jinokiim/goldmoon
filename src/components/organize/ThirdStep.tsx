@@ -1,11 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { Box, Button, Grid, Stack, Typography, SxProps, Badge } from '@mui/material';
-import Card from '../Card';
+import { Box, Button, Stack, Typography } from '@mui/material';
 import { COLORS } from '@/src/theme/palette';
-import RandomIcon from '@/src/assets/menu/random_icon';
-import BalanceIcon from '@/src/assets/menu/balance_icon';
-import { memberType } from '@/src/pages/main/members';
 import { MyTeamProps } from '@/src/pages/main/organize';
 
 //--------------------------------------------------------------------------
@@ -13,9 +9,9 @@ import { MyTeamProps } from '@/src/pages/main/organize';
 export function ThirdStep({
   value,
   selectedMembers,
-  onChange,
-  onPrev,
-  onNext
+  // onChange,
+  // onNext,
+  onPrev
 }: {
   value: MyTeamProps;
   selectedMembers: string[];

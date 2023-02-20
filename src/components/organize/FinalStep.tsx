@@ -1,11 +1,8 @@
 import { useEffect } from 'react';
 
-import { Box, Button, Grid, Stack, Typography, SxProps, Badge, Paper } from '@mui/material';
+import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import Card from '../Card';
 import { COLORS } from '@/src/theme/palette';
-import RandomIcon from '@/src/assets/menu/random_icon';
-import BalanceIcon from '@/src/assets/menu/balance_icon';
-import { memberType } from '@/src/pages/main/members';
 
 //--------------------------------------------------------------------------
 
