@@ -17,6 +17,8 @@ import breakpoints from './breakpoints';
 import componentsOverride from './overrides';
 import shadows, { customShadows } from './shadows';
 
+import { RecoilRoot } from 'recoil';
+
 // ----------------------------------------------------------------------
 
 type ThemeConfigProps = {
@@ -44,11 +46,13 @@ export default function ThemeConfig({ children }: ThemeConfigProps) {
   theme.components = componentsOverride(theme);
 
   return (
-    <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        {children}
-      </ThemeProvider>
-    </StyledEngineProvider>
+    <RecoilRoot>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          {children}
+        </ThemeProvider>
+      </StyledEngineProvider>
+    </RecoilRoot>
   );
 }

@@ -15,7 +15,10 @@ import { SecureKeypad } from '@/src/components/secure-keypad';
 import AppHeader from '@/src/components/Header';
 import _ from 'lodash';
 
+import { useRecoilState } from 'recoil';
+import { authState } from '@/src/recoil/atom';
 // ----------------------------------------------------------------------
+
 const CODE = [1, 1, 0, 2];
 const maxInputSize = 4;
 let defaultPinHint = '골드문 입장코드를 입력해주세요';
@@ -31,6 +34,8 @@ const IndexPage = function () {
   const router = useRouter();
 
   // const { headerHeight } = useSettings();
+  const [authCheck, setAuthCheck] = useRecoilState(authState);
+
   const [isErrorMsg, setIsErrorMsg] = useState<boolean>(false);
 
   const [password, setPassword] = useState<number[] | string[]>([]);
@@ -41,6 +46,10 @@ const IndexPage = function () {
   // const shouldResetPin = useMemo(() => {
   //   return isRegister ? false : true;
   // }, []);
+
+  const userCheckOk = () => {
+    setAuthCheck(true);
+  };
 
   const setPasswordFunc = (password: number[] | string[]) => {
     setPassword(password);
@@ -56,6 +65,7 @@ const IndexPage = function () {
     const isEqual = _.isEqual(password, CODE);
     // let message = '';
     if (isEqual) {
+      userCheckOk();
       router.push('/main');
     } else {
       setIsErrorMsg(true);
@@ -66,6 +76,7 @@ const IndexPage = function () {
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
+    console.log(authCheck);
     setMounted(true);
   }, []);
 
