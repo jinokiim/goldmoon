@@ -7,7 +7,6 @@ import GoldmoonLogo from '../assets/icons/goldmoon_logo';
 import GolfMainIcon from '../assets/icons/golf_main_icon';
 import { StyledButton } from '../components/common/Styled';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 
 const IndexPage: NextPage = function () {
   const { headerHeight } = useSettings();
