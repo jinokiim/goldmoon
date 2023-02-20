@@ -7,7 +7,27 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <body>
-          <Head></Head>
+          <Head>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+            />
+            <title>골드문</title>
+            <meta name="description" content="골프 동호회" />
+            <meta name="keywords" lang="ko" content="광교 골프 동호회" />
+            <meta name="keywords" lang="en" content="Gwang-gyo golf club" />
+            <meta name="author" content="Jinho Kim" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="골드문" />
+            <meta property="og:site_name" content="GOLDMOON" />
+            <meta
+              property="og:image"
+              content="https://raw.githubusercontent.com/jinokiim/goldmoon/main/goldmoon_logo.png"
+            />
+            <meta property="og:url" content="https://gold-moon.vercel.app/" />
+            <meta property="og:description" content="골프채를 드는 문제아들" />
+            <meta property="og:locale" content="ko_KR" />
+          </Head>
           <Main />
           <NextScript />
         </body>
