@@ -19,7 +19,8 @@ import { ApexOptions } from 'apexcharts';
 import { members, totalMembers } from '@/src/data/membersData';
 import { authState } from '@/src/recoil/atom';
 import { useRecoilState } from 'recoil';
-import MoveToInit from '../../moveToInit';
+
+import MoveToInit from '../../MoveToInit';
 
 // ----------------------------------------------------------------------
 
