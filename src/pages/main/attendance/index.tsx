@@ -20,6 +20,9 @@ import EmptySearchIcon from '@/src/assets/icons/empty_search_icon';
 import { members } from '@/src/data/membersData';
 import CheckGreenIcon from '@/src/assets/icons/check_green';
 import XIcon from '@/src/assets/icons/x_icon';
+import { authState } from '@/src/recoil/atom';
+import { useRecoilState } from 'recoil';
+import MoveToInit from '../../moveToInit';
 
 // ----------------------------------------------------------------------
 
@@ -29,6 +32,7 @@ const IndexPage = function () {
   const nowYear = date.getFullYear();
   const nowMonth = date.getMonth() + 1;
 
+  const [authCheck] = useRecoilState(authState);
   const [mounted, setMounted] = useState(false);
   const [search, setSearch] = useState<string>('');
   const [period] = useState({
@@ -300,44 +304,44 @@ const IndexPage = function () {
     setMounted(true);
   }, []);
 
-  return (
-    mounted && (
-      <Layout
-        header={
-          <>
-            <AppHeader onPrev={() => router.push('/main')} />
-          </>
-        }
-        content={
-          <Box
-            sx={{
-              pt: 7,
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center'
-            }}
-          >
-            <Box sx={{ height: '100%' }}>
-              <Box sx={{ pb: 2 }}>
-                <CommonSearch
-                  value={search}
-                  handleChange={handleSearchChange}
-                  placeholder="이름을 입력해보세요"
-                  onEmptySearchIconClick={() => setSearch('')}
-                />
-              </Box>
-              <Box sx={{ px: 2.5, mb: 2 }}>
-                <Typography variant="h6">
-                  오늘은 {date.getFullYear()}년 {date.getMonth() + 1}월이에요
-                </Typography>
-              </Box>
-              {renderContent}
+  return mounted && authCheck === true ? (
+    <Layout
+      header={
+        <>
+          <AppHeader onPrev={() => router.push('/main')} />
+        </>
+      }
+      content={
+        <Box
+          sx={{
+            pt: 7,
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          <Box sx={{ height: '100%' }}>
+            <Box sx={{ pb: 2 }}>
+              <CommonSearch
+                value={search}
+                handleChange={handleSearchChange}
+                placeholder="이름을 입력해보세요"
+                onEmptySearchIconClick={() => setSearch('')}
+              />
             </Box>
+            <Box sx={{ px: 2.5, mb: 2 }}>
+              <Typography variant="h6">
+                오늘은 {date.getFullYear()}년 {date.getMonth() + 1}월이에요
+              </Typography>
+            </Box>
+            {renderContent}
           </Box>
-        }
-      />
-    )
+        </Box>
+      }
+    />
+  ) : (
+    <MoveToInit />
   );
 };
 

@@ -20,6 +20,10 @@ import EmptyMenu from '@/src/assets/menu/empty_menu_icon';
 import MakeTeam from '@/src/assets/menu/make_team_icon';
 // import { formatter } from '../api/function';
 
+import { useRecoilState } from 'recoil';
+import { authState } from '@/src/recoil/atom';
+import MoveToInit from '../moveToInit';
+
 // ----------------------------------------------------------------------
 
 const menuIcon: SxProps = {
@@ -85,135 +89,138 @@ const IndexPage = function () {
   const router = useRouter();
   // const date = new Date();
 
+  const [authCheck] = useRecoilState(authState);
+
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    console.log(authCheck);
     setMounted(true);
   }, []);
 
-  return (
-    mounted && (
-      <Layout
-        header={
-          <>
-            <Box sx={{ textAlign: 'center', mt: 2.5 }}>
-              <GoldmoonLogo
-                width={201}
-                height={20}
-                onClick={() => {
-                  router.push('/main');
-                }}
-              />
-            </Box>
-          </>
-        }
-        content={
-          <Box
-            sx={{
-              pt: 7,
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center'
-            }}
-          >
-            <Box sx={{ height: '100%' }}>
-              <Box sx={{ px: 2.5 }}>
-                <Box sx={{ mb: 2.5 }}>
-                  <StyledButton
-                    sx={{ fontWeight: 600 }}
-                    onClick={() => router.push('/main/notice')}
-                  >
-                    공 지 사 항
-                  </StyledButton>
-                </Box>
+  return mounted && authCheck === true ? (
+    <Layout
+      header={
+        <>
+          <Box sx={{ textAlign: 'center', mt: 2.5 }}>
+            <GoldmoonLogo
+              width={201}
+              height={20}
+              onClick={() => {
+                router.push('/main');
+              }}
+            />
+          </Box>
+        </>
+      }
+      content={
+        <Box
+          sx={{
+            pt: 7,
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          <Box sx={{ height: '100%' }}>
+            <Box sx={{ px: 2.5 }}>
+              <Box sx={{ mb: 2.5 }}>
+                <StyledButton sx={{ fontWeight: 600 }} onClick={() => router.push('/main/notice')}>
+                  공 지 사 항
+                </StyledButton>
+              </Box>
 
-                {/* 자산 */}
-                <Box sx={{ mb: 2.5 }}>
-                  <Box sx={{ display: 'flex', justifyContent: 'space-between', pb: 0.5, px: 0.5 }}>
-                    <Typography variant="badgeLabelSmall">{financialLastUpdated} 기준</Typography>
-                    <Typography
-                      variant="badgeLabelSmall"
-                      onClick={() => {
-                        router.push('/main/financial/history');
-                      }}
-                    >
-                      어디에 썼을까요? &gt;
-                    </Typography>
-                  </Box>
-                  <Paper
-                    sx={{
-                      background: '#FFFFFF',
-                      border: '1px solid #DDE4EE',
-                      boxSizing: 'border-box',
-                      borderRadius: '12px'
+              {/* 자산 */}
+              <Box sx={{ mb: 2.5 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', pb: 0.5, px: 0.5 }}>
+                  <Typography variant="badgeLabelSmall">{financialLastUpdated} 기준</Typography>
+                  <Typography
+                    variant="badgeLabelSmall"
+                    onClick={() => {
+                      router.push('/main/financial/history');
                     }}
                   >
-                    <Box sx={{ px: 2.5, pt: 2, display: 'flex' }}>
-                      <Typography variant="h6">골드문 자산</Typography>
-                    </Box>
-                    <Box sx={{ py: 2, textAlign: 'center' }}>
-                      <Typography variant="h4">
-                        {Number(financialNow.total).toLocaleString()}원
-                      </Typography>
-                    </Box>
-                    <Box sx={{ pb: 2, px: 2.5 }}>
-                      <Stack direction="row" alignItems="center" justifyContent="center">
-                        <UpDownPrice state="UP" amount={financialNow.income} />
-                        <Box sx={{ mx: 8 }} />
-                        <UpDownPrice state="DOWN" amount={financialNow.spending} />
-                      </Stack>
-                    </Box>
-                  </Paper>
+                    어디에 썼을까요? &gt;
+                  </Typography>
                 </Box>
-                {/* 출석 & 회비납부 확인 */}
-                <Box sx={{ mb: 4.5 }}>
-                  <StyledButton
-                    sx={{ fontWeight: 600 }}
-                    onClick={() => router.push('/main/attendance')}
-                  >
-                    출석 & 회비납부 확인
-                  </StyledButton>
-                </Box>
+                <Paper
+                  sx={{
+                    background: '#FFFFFF',
+                    border: '1px solid #DDE4EE',
+                    boxSizing: 'border-box',
+                    borderRadius: '12px'
+                  }}
+                >
+                  <Box sx={{ px: 2.5, pt: 2, display: 'flex' }}>
+                    <Typography variant="h6">골드문 자산</Typography>
+                  </Box>
+                  <Box sx={{ py: 2, textAlign: 'center' }}>
+                    <Typography variant="h4">
+                      {Number(financialNow.total).toLocaleString()}원
+                    </Typography>
+                  </Box>
+                  <Box sx={{ pb: 2, px: 2.5 }}>
+                    <Stack direction="row" alignItems="center" justifyContent="center">
+                      <UpDownPrice state="UP" amount={financialNow.income} />
+                      <Box sx={{ mx: 8 }} />
+                      <UpDownPrice state="DOWN" amount={financialNow.spending} />
+                    </Stack>
+                  </Box>
+                </Paper>
               </Box>
-
-              <Box
-                sx={{
-                  height: 12,
-                  backgroundColor: '#F5F6F9',
-                  mb: 2.5
-                }}
-              />
-              {/* 리스트 메뉴 */}
-
-              <Typography
-                variant="h2"
-                color={COLORS.secondary700}
-                sx={{
-                  background: COLORS.white,
-                  height: '38px',
-                  px: 2.5,
-                  marginTop: '-1px', //safari issue
-                  marginBottom: '-1.5px' //safari issue
-                }}
-              >
-                메뉴
-              </Typography>
-              <Box
-                sx={{
-                  mx: '20px',
-                  py: 4,
-                  paddingTop: '24px',
-                  display: 'flex',
-                  flexWrap: 'wrap'
-                }}
-              >
-                {menuBox}
+              {/* 출석 & 회비납부 확인 */}
+              <Box sx={{ mb: 4.5 }}>
+                <StyledButton
+                  sx={{ fontWeight: 600 }}
+                  onClick={() => router.push('/main/attendance')}
+                >
+                  출석 & 회비납부 확인
+                </StyledButton>
               </Box>
             </Box>
+
+            <Box
+              sx={{
+                height: 12,
+                backgroundColor: '#F5F6F9',
+                mb: 2.5
+              }}
+            />
+            {/* 리스트 메뉴 */}
+
+            <Typography
+              variant="h2"
+              color={COLORS.secondary700}
+              sx={{
+                background: COLORS.white,
+                height: '38px',
+                px: 2.5,
+                marginTop: '-1px', //safari issue
+                marginBottom: '-1.5px' //safari issue
+              }}
+            >
+              메뉴
+            </Typography>
+            <Box
+              sx={{
+                mx: '20px',
+                py: 4,
+                paddingTop: '24px',
+                display: 'flex',
+                flexWrap: 'wrap'
+              }}
+            >
+              {menuBox}
+            </Box>
           </Box>
-        }
-      />
-    )
+        </Box>
+      }
+    />
+  ) : (
+    <>
+      <MoveToInit />
+    </>
   );
 };
 
