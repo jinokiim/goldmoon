@@ -14,7 +14,7 @@ import { COLORS } from '@/src/theme/palette';
 import { financialHistory } from '@/src/data/financialData';
 import { authState } from '@/src/recoil/atom';
 import { useRecoilState } from 'recoil';
-import MoveToInit from '@/src/pages/moveToInit';
+import MoveToInit from '@/src/pages/MoveToInit';
 
 // ----------------------------------------------------------------------
 

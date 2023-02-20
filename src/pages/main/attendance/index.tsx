@@ -22,7 +22,7 @@ import CheckGreenIcon from '@/src/assets/icons/check_green';
 import XIcon from '@/src/assets/icons/x_icon';
 import { authState } from '@/src/recoil/atom';
 import { useRecoilState } from 'recoil';
-import MoveToInit from '../../moveToInit';
+import MoveToInit from '@/src/pages/MoveToInit';
 
 // ----------------------------------------------------------------------
 

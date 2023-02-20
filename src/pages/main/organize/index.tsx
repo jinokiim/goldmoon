@@ -17,6 +17,9 @@ import { memberType } from '../members';
 import { members } from '@/src/data/membersData';
 import { ThirdStep } from '@/src/components/organize/ThirdStep';
 import { FinalStep } from '@/src/components/organize/FinalStep';
+import { authState } from '@/src/recoil/atom';
+import { useRecoilState } from 'recoil';
+import MoveToInit from '../../MoveToInit';
 
 // ----------------------------------------------------------------------
 
@@ -36,6 +39,7 @@ export interface MyTeamProps {
 const IndexPage = function () {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
+  const [authCheck] = useRecoilState(authState);
 
   const [step, setStep] = useState<number>(1);
   const [selectedMembers, setSelectedMembers] = useState<string[]>([]);
@@ -85,46 +89,46 @@ const IndexPage = function () {
     sortMemberDataFunc(members);
   }, []);
 
-  return (
-    mounted && (
-      <Layout
-        header={
-          <>
-            <AppHeader onPrev={() => router.push('/main')} onPrevText={'그룹 나누기'} />
-          </>
-        }
-        content={
-          <Box sx={{ mt: 3, textAlign: 'center' }}>
-            {/*  */}
-            {step === 1 && (
-              <FirstStep value={myTeam} onChange={handleMyTeam} onNext={handleNextStep} />
-            )}
-            {step === 2 && (
-              <SecondStep
-                members={sortedMembers}
-                value={myTeam}
-                selectedMembers={selectedMembers}
-                onChange={handleMyTeam}
-                handleSelectedMembers={handleSelectedMembers}
-                onPrev={handlePrevStep}
-                onNext={handleNextStep}
-              />
-            )}
-            {step === 3 && (
-              <ThirdStep
-                value={myTeam}
-                selectedMembers={selectedMembers}
-                onChange={handleMyTeam}
-                onPrev={handlePrevStep}
-                onNext={handleNextStep}
-              />
-            )}
-            {step === 4 && <FinalStep />}
-            {/*  */}
-          </Box>
-        }
-      />
-    )
+  return mounted && authCheck === true ? (
+    <Layout
+      header={
+        <>
+          <AppHeader onPrev={() => router.push('/main')} onPrevText={'그룹 나누기'} />
+        </>
+      }
+      content={
+        <Box sx={{ mt: 3, textAlign: 'center' }}>
+          {/*  */}
+          {step === 1 && (
+            <FirstStep value={myTeam} onChange={handleMyTeam} onNext={handleNextStep} />
+          )}
+          {step === 2 && (
+            <SecondStep
+              members={sortedMembers}
+              value={myTeam}
+              selectedMembers={selectedMembers}
+              onChange={handleMyTeam}
+              handleSelectedMembers={handleSelectedMembers}
+              onPrev={handlePrevStep}
+              onNext={handleNextStep}
+            />
+          )}
+          {step === 3 && (
+            <ThirdStep
+              value={myTeam}
+              selectedMembers={selectedMembers}
+              onChange={handleMyTeam}
+              onPrev={handlePrevStep}
+              onNext={handleNextStep}
+            />
+          )}
+          {step === 4 && <FinalStep />}
+          {/*  */}
+        </Box>
+      }
+    />
+  ) : (
+    <MoveToInit />
   );
 };
 
