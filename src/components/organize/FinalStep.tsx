@@ -17,7 +17,7 @@ export function FinalStep() {
       <Box sx={{ px: 2.5 }}>
         <Box sx={{ pt: 3, mb: 2 }}>
           <Typography variant="h6" align="center">
-            00명의 인원을 00개의 방으로 나누었어요
+            00명의 인원을 00개의 그룹으로 나누었어요
           </Typography>
         </Box>
         <Box sx={{ pb: 5, mx: 2 }}>
@@ -48,7 +48,7 @@ export function FinalStep() {
                         color: COLORS.secondary700
                       }}
                     >
-                      1번방
+                      1번 그룹
                     </Typography>
                     <Typography>124234</Typography>
                     <Typography>124234</Typography>

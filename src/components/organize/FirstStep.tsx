@@ -45,7 +45,10 @@ const makeTeamMenuLists = [
 export function FirstStep({ value, onChange, onNext }: StepProps) {
   const [picked, setPicked] = useState<String>('');
   const [desc, setDesc] = useState<String>('');
-  useEffect(() => {}, []);
+
+  useEffect(() => {
+    console.log('step1 value: ', value);
+  }, []);
 
   return (
     <>
@@ -73,9 +76,9 @@ export function FirstStep({ value, onChange, onNext }: StepProps) {
                     onClick={() => {
                       setPicked(item.title_eng);
                       setDesc(item.title);
-                      // onChange({
-                      //   category: item.title_eng
-                      // });
+                      onChange({
+                        category: item.title_eng
+                      });
                     }}
                   >
                     <Stack
@@ -90,7 +93,6 @@ export function FirstStep({ value, onChange, onNext }: StepProps) {
                             picked === item.title_eng
                               ? COLORS.backgroundDefault
                               : COLORS.secondary700,
-
                           mb: 1
                         }}
                       >

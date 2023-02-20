@@ -23,12 +23,13 @@ import { FinalStep } from '@/src/components/organize/FinalStep';
 export interface StepProps {
   value: MyTeamProps;
   onPrev?: () => void;
-  onNext?: () => void;
-  onChange?: (data: Partial<MyTeamProps>) => void;
+  onNext: () => void;
+  onChange: (data: Partial<MyTeamProps>) => void;
 }
 export interface MyTeamProps {
   category?: string;
-  members: string;
+  members: memberType[];
+  selectedMembers: string[];
   rooms?: number;
 }
 
@@ -36,12 +37,14 @@ const IndexPage = function () {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
 
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState<number>(1);
+  const [selectedMembers, setSelectedMembers] = useState<string[]>([]);
 
   const [sortedMembers, setSortedMembers] = useState<memberType[]>([]);
   const [myTeam, setMyTeam] = useState<MyTeamProps>({
     category: '',
-    members: '',
+    members: [],
+    selectedMembers: [],
     rooms: 0
   });
 
@@ -67,7 +70,15 @@ const IndexPage = function () {
   };
 
   const handleNextStep = () => {
-    setStep((prevState) => ++prevState);
+    setStep(step + 1);
+  };
+
+  const handleSelectedMembers = (member: string) => {
+    if (selectedMembers.includes(member)) {
+      setSelectedMembers(selectedMembers.filter((m) => m !== member));
+    } else {
+      setSelectedMembers([...selectedMembers, member]);
+    }
   };
 
   useEffect(() => {
@@ -79,7 +90,7 @@ const IndexPage = function () {
       <Layout
         header={
           <>
-            <AppHeader onPrev={() => router.push('/main')} onPrevText={'방 나누기'} />
+            <AppHeader onPrev={() => router.push('/main')} onPrevText={'그룹 나누기'} />
           </>
         }
         content={
@@ -88,8 +99,26 @@ const IndexPage = function () {
             {step === 1 && (
               <FirstStep value={myTeam} onChange={handleMyTeam} onNext={handleNextStep} />
             )}
-            {step === 2 && <SecondStep members={sortedMembers} />}
-            {step === 3 && <ThirdStep />}
+            {step === 2 && (
+              <SecondStep
+                members={sortedMembers}
+                value={myTeam}
+                selectedMembers={selectedMembers}
+                onChange={handleMyTeam}
+                handleSelectedMembers={handleSelectedMembers}
+                onPrev={handlePrevStep}
+                onNext={handleNextStep}
+              />
+            )}
+            {step === 3 && (
+              <ThirdStep
+                value={myTeam}
+                selectedMembers={selectedMembers}
+                onChange={handleMyTeam}
+                onPrev={handlePrevStep}
+                onNext={handleNextStep}
+              />
+            )}
             {step === 4 && <FinalStep />}
             {/*  */}
           </Box>
