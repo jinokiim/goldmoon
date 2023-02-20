@@ -22,7 +22,7 @@ import MakeTeam from '@/src/assets/menu/make_team_icon';
 
 import { useRecoilState } from 'recoil';
 import { authState } from '@/src/recoil/atom';
-import MoveToInit from '../moveToInit';
+import MoveToInit from '../MoveToInit';
 
 // ----------------------------------------------------------------------
 
