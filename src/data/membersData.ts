@@ -1,4 +1,5 @@
 export const totalMembers = [37, 40, 39, 41, 40, 42, 50, 45];
+export const membersLastUpdated = '23년 02월 07일 13시';
 export const members = [
   {
     id: '1',
@@ -14,7 +15,7 @@ export const members = [
       '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -31,7 +32,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    bird: 'ccachi',
+    bird: 4,
     is_status: 'y'
   },
   {
@@ -48,7 +49,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    bird: 'ccachi',
+    bird: 1,
     is_status: 'y'
   },
   {
@@ -65,7 +66,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    bird: 'ccachi',
+    bird: 5,
     is_status: 'y'
   },
   {
@@ -82,7 +83,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -99,7 +100,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    bird: 'ccachi',
+    bird: 5,
     is_status: 'y'
   },
   {
@@ -116,7 +117,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    bird: 'ccachi',
+    bird: 4,
     is_status: 'y'
   },
   {
@@ -133,7 +134,7 @@ export const members = [
       '2023': ['1', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    bird: 'ccachi',
+    bird: 5,
     is_status: 'y'
   },
   {
@@ -150,7 +151,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -167,7 +168,7 @@ export const members = [
       '2023': ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1']
     },
     reg_date: '2022-05',
-    bird: 'ccachi',
+    bird: 5,
     is_status: 'y'
   },
   {
@@ -184,7 +185,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-05',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -201,7 +202,7 @@ export const members = [
       '2023': ['1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-05',
-    bird: 'ccachi',
+    bird: 5,
     is_status: 'y'
   },
   {
@@ -218,7 +219,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-06',
-    bird: 'ccachi',
+    bird: 5,
     is_status: 'y'
   },
   {
@@ -235,7 +236,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-06',
-    bird: 'ccachi',
+    bird: 5,
     is_status: 'y'
   },
   {
@@ -252,7 +253,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-06',
-    bird: 'ccachi',
+    bird: 1,
     is_status: 'y'
   },
   {
@@ -269,7 +270,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-06',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -286,7 +287,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-09',
-    bird: 'ccachi',
+    bird: 4,
     is_status: 'y'
   },
   {
@@ -303,7 +304,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-09',
-    bird: 'ccachi',
+    bird: 4,
     is_status: 'y'
   },
   {
@@ -320,7 +321,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -337,7 +338,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
-    bird: 'ccachi',
+    bird: 4,
     is_status: 'y'
   },
   {
@@ -354,7 +355,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -371,7 +372,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
-    bird: 'ccachi',
+    bird: 5,
     is_status: 'y'
   },
   {
@@ -388,7 +389,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
-    bird: 'ccachi',
+    bird: 4,
     is_status: 'y'
   },
   {
@@ -405,7 +406,7 @@ export const members = [
       '2023': ['1', '부상', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
-    bird: 'ccachi',
+    bird: 4,
     is_status: 'y'
   },
   {
@@ -422,7 +423,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-11',
-    bird: 'ccachi',
+    bird: 2,
     is_status: 'y'
   },
   {
@@ -439,7 +440,7 @@ export const members = [
       '2023': ['1', '부상', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-11',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -456,7 +457,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -473,7 +474,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -490,7 +491,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
-    bird: 'ccachi',
+    bird: 1,
     is_status: 'y'
   },
   {
@@ -507,7 +508,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -524,7 +525,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -541,7 +542,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -558,7 +559,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 2,
     is_status: 'y'
   },
   {
@@ -575,7 +576,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 2,
     is_status: 'y'
   },
   {
@@ -592,7 +593,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 1,
     is_status: 'y'
   },
   {
@@ -609,7 +610,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 2,
     is_status: 'y'
   },
   {
@@ -626,7 +627,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 4,
     is_status: 'y'
   },
   {
@@ -643,7 +644,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 5,
     is_status: 'y'
   },
   {
@@ -660,7 +661,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'n'
   },
   {
@@ -677,7 +678,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 2,
     is_status: 'y'
   },
   {
@@ -694,7 +695,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 2,
     is_status: 'y'
   },
   {
@@ -711,7 +712,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 1,
     is_status: 'y'
   },
   {
@@ -728,7 +729,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -745,7 +746,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 1,
     is_status: 'y'
   },
   {
@@ -762,7 +763,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   },
   {
@@ -779,7 +780,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    bird: 'ccachi',
+    bird: 3,
     is_status: 'y'
   }
 ];

@@ -49,6 +49,7 @@ const IndexPage = function () {
 
   const userCheckOk = () => {
     setAuthCheck(true);
+    console.log(authCheck);
   };
 
   const setPasswordFunc = (password: number[] | string[]) => {
@@ -76,7 +77,6 @@ const IndexPage = function () {
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    console.log(authCheck);
     setMounted(true);
   }, []);
 

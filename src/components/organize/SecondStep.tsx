@@ -9,7 +9,6 @@ import { MyTeamProps } from '@/src/pages/main/organize';
 
 export function SecondStep({
   members,
-  value,
   selectedMembers,
   onChange,
   handleSelectedMembers,
@@ -26,9 +25,7 @@ export function SecondStep({
 }) {
   const filteredMembers = members.filter((member) => selectedMembers.includes(member.name));
 
-  useEffect(() => {
-    console.log(value);
-  }, [filteredMembers]);
+  useEffect(() => {}, [filteredMembers]);
 
   return (
     <>
@@ -61,9 +58,6 @@ export function SecondStep({
                   }
                   onClick={() => {
                     handleSelectedMembers(item.name);
-                    console.log(item);
-                    console.log('selectedMembers', selectedMembers);
-                    console.log(selectedMembers.includes(item.name));
                   }}
                   sx={{
                     mx: 1,
@@ -94,15 +88,6 @@ export function SecondStep({
             </Box>
             을 선택했어요
           </Typography>
-          <button
-            onClick={() => {
-              console.log(selectedMembers);
-              console.log('filteredMembers', filteredMembers);
-              console.log(value);
-            }}
-          >
-            @@@
-          </button>
         </Box>
       </Box>
       <Stack
@@ -129,7 +114,6 @@ export function SecondStep({
             onChange({
               members: filteredMembers
             });
-            console.log('value', value);
             /* @ts-ignore */
             onNext();
           }}

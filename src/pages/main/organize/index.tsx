@@ -33,7 +33,7 @@ export interface MyTeamProps {
   category?: string;
   members: memberType[];
   selectedMembers: string[];
-  rooms?: number;
+  rooms: number;
 }
 
 const IndexPage = function () {
@@ -122,7 +122,15 @@ const IndexPage = function () {
               onNext={handleNextStep}
             />
           )}
-          {step === 4 && <FinalStep />}
+          {step === 4 && (
+            <FinalStep
+              value={myTeam}
+              selectedMembers={selectedMembers}
+              onChange={handleMyTeam}
+              onPrev={handlePrevStep}
+              onNext={handleNextStep}
+            />
+          )}
           {/*  */}
         </Box>
       }
