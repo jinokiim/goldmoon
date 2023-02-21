@@ -25,6 +25,7 @@ import MoveToInit from '../../MoveToInit';
 // ----------------------------------------------------------------------
 
 export interface memberType {
+  bird: number;
   id: string;
   name: string;
   gender: string;

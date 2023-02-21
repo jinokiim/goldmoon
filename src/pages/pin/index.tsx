@@ -76,7 +76,6 @@ const IndexPage = function () {
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    console.log(authCheck);
     setMounted(true);
   }, []);
 
