@@ -49,7 +49,6 @@ export function FinalStep({
 
     return subarrays;
   };
-  const subarrays = randomMode(selectedMembers, value.rooms);
 
   // -------------- 밸런스 모드
   function groupByBirdCount(members: memberType[], rooms: number) {
