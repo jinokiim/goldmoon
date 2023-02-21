@@ -49,6 +49,7 @@ const IndexPage = function () {
 
   const userCheckOk = () => {
     setAuthCheck(true);
+    console.log(authCheck);
   };
 
   const setPasswordFunc = (password: number[] | string[]) => {

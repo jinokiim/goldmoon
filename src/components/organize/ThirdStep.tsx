@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import { Box, Button, Card, Paper, Stack, Typography } from '@mui/material';
+import { Box, Button, Paper, Stack, Typography } from '@mui/material';
 import { COLORS } from '@/src/theme/palette';
 import { MyTeamProps } from '@/src/pages/main/organize';
 
 //--------------------------------------------------------------------------
 
 export function ThirdStep({
-  value,
   selectedMembers,
   onChange,
   onNext,
@@ -77,7 +76,7 @@ export function ThirdStep({
                   {selectedMembers.map((item, index) => {
                     return (
                       <>
-                        <Box component="span" sx={{ mx: 0.5 }}>
+                        <Box component="span" sx={{ mx: 0.5 }} key={index}>
                           {item}
                           {'  '}
                         </Box>

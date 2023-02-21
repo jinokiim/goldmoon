@@ -42,7 +42,7 @@ const makeTeamMenuLists = [
   }
 ];
 
-export function FirstStep({ value, onChange, onNext }: StepProps) {
+export function FirstStep({ onChange, onNext }: StepProps) {
   const [picked, setPicked] = useState<String>('');
   const [desc, setDesc] = useState<String>('');
 
