@@ -1,4 +1,5 @@
 export const totalMembers = [37, 40, 39, 41, 40, 42, 50, 45];
+export const membersLastUpdated = '23년 02월 07일 13시';
 export const members = [
   {
     id: '1',

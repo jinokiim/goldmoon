@@ -17,7 +17,7 @@ import { styled, alpha } from '@mui/material/styles';
 import { COLORS } from '@/src/theme/palette';
 import EmptySearchIcon from '@/src/assets/icons/empty_search_icon';
 
-import { members } from '@/src/data/membersData';
+import { members, membersLastUpdated } from '@/src/data/membersData';
 import CheckGreenIcon from '@/src/assets/icons/check_green';
 import XIcon from '@/src/assets/icons/x_icon';
 import { authState } from '@/src/recoil/atom';
@@ -77,6 +77,7 @@ const IndexPage = function () {
             })
             ?.map((item, index) => (
               <Box key={index} sx={{ px: 2.5 }}>
+                <Typography variant="badgeLabelLarge">{membersLastUpdated}를 기준으로</Typography>
                 <Typography variant="h4">
                   <Box component="span" sx={{ color: COLORS.secondary700 }}>
                     {item.name}
