@@ -23,6 +23,7 @@ import MakeTeam from '@/src/assets/menu/make_team_icon';
 import { useRecoilState } from 'recoil';
 import { authState } from '@/src/recoil/atom';
 import MoveToInit from '../MoveToInit';
+import InformationIcon from '@/src/assets/menu/information_icon';
 
 // ----------------------------------------------------------------------
 
@@ -76,10 +77,10 @@ const menuLists = [
   },
   {
     title: '정보',
-    url: 'empty',
+    url: 'info',
     icon: (
       <Box className="GoldmoonIcon" sx={{ ...menuIcon }}>
-        <EmptyMenu />
+        <InformationIcon />
       </Box>
     )
   }
