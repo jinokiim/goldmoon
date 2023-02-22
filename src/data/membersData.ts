@@ -15,6 +15,7 @@ export const members = [
       '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -32,6 +33,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
+    withdrawal_date: '',
     bird: 4,
     is_status: 'y'
   },
@@ -49,6 +51,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
+    withdrawal_date: '',
     bird: 1,
     is_status: 'y'
   },
@@ -66,6 +69,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
+    withdrawal_date: '',
     bird: 5,
     is_status: 'y'
   },
@@ -83,6 +87,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -100,6 +105,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
+    withdrawal_date: '',
     bird: 5,
     is_status: 'y'
   },
@@ -117,6 +123,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
+    withdrawal_date: '',
     bird: 4,
     is_status: 'y'
   },
@@ -134,6 +141,7 @@ export const members = [
       '2023': ['1', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
+    withdrawal_date: '',
     bird: 5,
     is_status: 'y'
   },
@@ -151,6 +159,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -168,6 +177,7 @@ export const members = [
       '2023': ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1']
     },
     reg_date: '2022-05',
+    withdrawal_date: '',
     bird: 5,
     is_status: 'y'
   },
@@ -185,6 +195,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-05',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -202,6 +213,7 @@ export const members = [
       '2023': ['1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-05',
+    withdrawal_date: '',
     bird: 5,
     is_status: 'y'
   },
@@ -219,6 +231,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-06',
+    withdrawal_date: '',
     bird: 5,
     is_status: 'y'
   },
@@ -236,6 +249,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-06',
+    withdrawal_date: '',
     bird: 5,
     is_status: 'y'
   },
@@ -253,6 +267,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-06',
+    withdrawal_date: '',
     bird: 1,
     is_status: 'y'
   },
@@ -270,6 +285,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-06',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -287,6 +303,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-09',
+    withdrawal_date: '',
     bird: 4,
     is_status: 'y'
   },
@@ -304,6 +321,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-09',
+    withdrawal_date: '',
     bird: 4,
     is_status: 'y'
   },
@@ -321,6 +339,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -338,6 +357,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
+    withdrawal_date: '',
     bird: 4,
     is_status: 'y'
   },
@@ -355,6 +375,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -372,6 +393,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
+    withdrawal_date: '',
     bird: 5,
     is_status: 'y'
   },
@@ -389,6 +411,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
+    withdrawal_date: '',
     bird: 4,
     is_status: 'y'
   },
@@ -406,6 +429,7 @@ export const members = [
       '2023': ['1', '부상', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-10',
+    withdrawal_date: '',
     bird: 4,
     is_status: 'y'
   },
@@ -423,6 +447,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-11',
+    withdrawal_date: '',
     bird: 2,
     is_status: 'y'
   },
@@ -440,6 +465,7 @@ export const members = [
       '2023': ['1', '부상', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-11',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -457,6 +483,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -474,6 +501,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -491,6 +519,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
+    withdrawal_date: '',
     bird: 1,
     is_status: 'y'
   },
@@ -508,6 +537,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -525,6 +555,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -542,6 +573,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -559,6 +591,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 2,
     is_status: 'y'
   },
@@ -576,6 +609,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 2,
     is_status: 'y'
   },
@@ -593,6 +627,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 1,
     is_status: 'y'
   },
@@ -610,6 +645,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 2,
     is_status: 'y'
   },
@@ -627,6 +663,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 4,
     is_status: 'y'
   },
@@ -644,6 +681,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 5,
     is_status: 'y'
   },
@@ -661,6 +699,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'n'
   },
@@ -678,6 +717,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 2,
     is_status: 'y'
   },
@@ -695,6 +735,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 2,
     is_status: 'y'
   },
@@ -712,6 +753,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 1,
     is_status: 'y'
   },
@@ -729,6 +771,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -746,6 +789,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 1,
     is_status: 'y'
   },
@@ -763,6 +807,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   },
@@ -780,6 +825,7 @@ export const members = [
       '2023': ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
+    withdrawal_date: '',
     bird: 3,
     is_status: 'y'
   }
