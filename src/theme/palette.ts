@@ -70,6 +70,10 @@ declare module '@mui/material' {
 }
 export const COLORS = {
   // ------------------------------------------ OLD COLORS ------------------------------------------
+
+  pastelyellow: '#FFFCEB ',
+  pastelorange: '#FFECE0 ',
+  pastelred: '#FCE3E3 ',
   // white: '#fff',
   neutral1: '#f5f7fa',
   neutral2: '#eff1f7',

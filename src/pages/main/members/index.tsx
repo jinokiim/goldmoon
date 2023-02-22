@@ -38,6 +38,7 @@ export interface memberType {
     '2023': string[];
   };
   reg_date: string;
+  withdrawal_date: string;
   birth: string;
   is_status: string;
 }
