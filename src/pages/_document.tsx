@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
           <Head>
             <meta
               name="viewport"
-              content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+              content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
             />
             <title>골드문</title>
             <meta name="description" content="골프 동호회" />
