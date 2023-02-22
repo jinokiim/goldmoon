@@ -23,6 +23,8 @@ import MakeTeam from '@/src/assets/menu/make_team_icon';
 import { useRecoilState } from 'recoil';
 import { authState } from '@/src/recoil/atom';
 import MoveToInit from '../MoveToInit';
+import Lottie from 'react-lottie';
+import { defaultLoadingOptions } from '..';
 import InformationIcon from '@/src/assets/menu/information_icon';
 
 // ----------------------------------------------------------------------
@@ -217,6 +219,19 @@ const IndexPage = function () {
         </Box>
       }
     />
+  ) : mounted === false && authCheck === true ? (
+    <>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
+        }}
+      >
+        <Lottie options={defaultLoadingOptions} height={200} width={200} />
+      </Box>
+    </>
   ) : (
     <>
       <MoveToInit />

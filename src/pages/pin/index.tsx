@@ -17,6 +17,9 @@ import _ from 'lodash';
 
 import { useRecoilState } from 'recoil';
 import { authState } from '@/src/recoil/atom';
+import { defaultLoadingOptions } from '..';
+import Lottie from 'react-lottie';
+
 // ----------------------------------------------------------------------
 
 const CODE = [1, 1, 0, 2];
@@ -80,55 +83,66 @@ const IndexPage = function () {
     setMounted(true);
   }, []);
 
-  return (
-    mounted && (
-      <Layout
-        header={
-          <>
-            <AppHeader onPrev={() => router.push('/')} />
-          </>
-        }
-        content={
-          <Box
-            sx={{
-              pt: 7,
-              px: 2,
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center'
-            }}
-          >
-            <Box sx={{ height: '100%' }}>
-              <Typography variant="h3" sx={{ ...errMsgStyles }}>
-                코드를 입력해주세요
-              </Typography>
+  return mounted === true ? (
+    <Layout
+      header={
+        <>
+          <AppHeader onPrev={() => router.push('/')} />
+        </>
+      }
+      content={
+        <Box
+          sx={{
+            pt: 7,
+            px: 2,
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          <Box sx={{ height: '100%' }}>
+            <Typography variant="h3" sx={{ ...errMsgStyles }}>
+              코드를 입력해주세요
+            </Typography>
 
-              <PinMask
-                password={pass}
-                maxInputSize={maxInputSize}
-                errorMessage={defaultPinHint}
-                errorMessageStyles={{
-                  // color: errorMessage === defaultPinHint ? '#33374D' : theme.palette.error.main
-                  color: isErrorMsg ? theme.palette.error.main : COLORS.secondary500
-                }}
-                sx={{}}
-              />
-              <SecureKeypad
-                password={password}
-                setPasswordFunc={setPasswordFunc}
-                pinStyles={{ backgroundColor: '#FFF' }}
-                shouldReset={true}
-                type="pin"
-                maxInputSize={maxInputSize}
-                onReset={onReset}
-                onSubmit={onSubmit}
-              />
-            </Box>
+            <PinMask
+              password={pass}
+              maxInputSize={maxInputSize}
+              errorMessage={defaultPinHint}
+              errorMessageStyles={{
+                // color: errorMessage === defaultPinHint ? '#33374D' : theme.palette.error.main
+                color: isErrorMsg ? theme.palette.error.main : COLORS.secondary700
+              }}
+              sx={{}}
+            />
+            <SecureKeypad
+              password={password}
+              setPasswordFunc={setPasswordFunc}
+              pinStyles={{ backgroundColor: '#FFF' }}
+              shouldReset={true}
+              type="pin"
+              maxInputSize={maxInputSize}
+              onReset={onReset}
+              onSubmit={onSubmit}
+            />
           </Box>
-        }
-      />
-    )
+        </Box>
+      }
+    />
+  ) : (
+    <>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
+        }}
+      >
+        <Lottie options={defaultLoadingOptions} height={200} width={200} />
+      </Box>
+    </>
   );
 };
 

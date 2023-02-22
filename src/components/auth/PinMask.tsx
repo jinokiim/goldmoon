@@ -1,3 +1,4 @@
+import { COLORS } from '@/src/theme/palette';
 import { Box, BoxProps, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { SxProps, Theme } from '@mui/system';
@@ -38,7 +39,7 @@ export default function PinMask({
                 height: '14px',
                 backgroundColor:
                   password[index] || password[index] === 0
-                    ? theme.palette.secondary.main
+                    ? COLORS.secondary700
                     : theme.palette.info.dark,
                 borderRadius: '50px'
               }}

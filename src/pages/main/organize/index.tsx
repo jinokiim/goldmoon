@@ -20,6 +20,8 @@ import { FinalStep } from '@/src/components/organize/FinalStep';
 import { authState } from '@/src/recoil/atom';
 import { useRecoilState } from 'recoil';
 import MoveToInit from '../../MoveToInit';
+import Lottie from 'react-lottie';
+import { defaultLoadingOptions } from '@/src/pages';
 
 // ----------------------------------------------------------------------
 
@@ -135,8 +137,23 @@ const IndexPage = function () {
         </Box>
       }
     />
+  ) : mounted === false && authCheck === true ? (
+    <>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
+        }}
+      >
+        <Lottie options={defaultLoadingOptions} height={200} width={200} />
+      </Box>
+    </>
   ) : (
-    <MoveToInit />
+    <>
+      <MoveToInit />
+    </>
   );
 };
 

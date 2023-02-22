@@ -7,12 +7,30 @@ import GoldmoonLogo from '../assets/icons/goldmoon_logo';
 import GolfMainIcon from '../assets/icons/golf_main_icon';
 import { StyledButton } from '../components/common/Styled';
 import { useRouter } from 'next/router';
+import Lottie from 'react-lottie';
+import animationData from '../assets/lotties/loading.json';
+import { useEffect, useState } from 'react';
+
+export const defaultLoadingOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice'
+  }
+};
 
 const IndexPage: NextPage = function () {
   const { headerHeight } = useSettings();
   const router = useRouter();
 
-  return (
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return mounted === true ? (
     <LayoutMain
       hasNav
       styles={{
@@ -40,6 +58,19 @@ const IndexPage: NextPage = function () {
         </>
       }
     />
+  ) : (
+    <>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
+        }}
+      >
+        <Lottie options={defaultLoadingOptions} height={200} width={200} />
+      </Box>
+    </>
   );
 };
 
