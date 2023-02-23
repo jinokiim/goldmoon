@@ -18,7 +18,7 @@ const MyApp = (props: AppProps) => {
       </Head>
       <ThemeConfig>
         <ThemePrimaryColor>
-          <div style={{ touchAction: 'manipulation !important' }}>
+          <div style={{ WebkitOverflowScrolling: 'touch', overflowX: 'hidden' }}>
             <Component {...pageProps} />
           </div>
         </ThemePrimaryColor>
