@@ -2,7 +2,6 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import ThemeConfig from '../theme';
 import ThemePrimaryColor from '../components/ThemePrimaryColor';
-import Head from 'next/head';
 import { useEffect, useRef } from 'react';
 
 const MyApp = (props: AppProps) => {
