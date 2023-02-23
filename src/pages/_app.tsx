@@ -3,26 +3,47 @@ import type { AppProps } from 'next/app';
 import ThemeConfig from '../theme';
 import ThemePrimaryColor from '../components/ThemePrimaryColor';
 import Head from 'next/head';
+import { useEffect, useRef } from 'react';
 
 const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props;
 
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const preventZoom = (event: { touches: any[]; preventDefault: () => void }) => {
+      const touch = event.touches[0];
+      const distance = Math.sqrt(touch.clientX ** 2 + touch.clientY ** 2);
+
+      if (distance < 150) {
+        event.preventDefault();
+      }
+    };
+
+    const element = ref.current;
+
+    if (element) {
+      /* @ts-ignore */
+      element.addEventListener('touchmove', preventZoom, { passive: false });
+    }
+
+    return () => {
+      if (element) {
+        /* @ts-ignore */
+        element.removeEventListener('touchmove', preventZoom);
+      }
+    };
+  }, []);
+
   return (
     <>
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-        />
-        <title>골드문</title>
-      </Head>
-      <ThemeConfig>
-        <ThemePrimaryColor>
-          <div style={{ WebkitOverflowScrolling: 'touch', overflowX: 'hidden' }}>
+      <div ref={ref}>
+        <ThemeConfig>
+          <ThemePrimaryColor>
             <Component {...pageProps} />
-          </div>
-        </ThemePrimaryColor>
-      </ThemeConfig>
+          </ThemePrimaryColor>
+        </ThemeConfig>
+      </div>
     </>
   );
 };
