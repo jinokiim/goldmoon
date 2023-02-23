@@ -18,7 +18,9 @@ const MyApp = (props: AppProps) => {
       </Head>
       <ThemeConfig>
         <ThemePrimaryColor>
-          <Component {...pageProps} />
+          <div style={{ touchAction: 'manipulation' }}>
+            <Component {...pageProps} />
+          </div>
         </ThemePrimaryColor>
       </ThemeConfig>
     </>
