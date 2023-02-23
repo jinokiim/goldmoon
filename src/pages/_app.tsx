@@ -11,11 +11,14 @@ const MyApp = (props: AppProps) => {
 
   useEffect(() => {
     const preventZoom = (event: { touches: any[]; preventDefault: () => void }) => {
-      const touch = event.touches[0];
-      const distance = Math.sqrt(touch.clientX ** 2 + touch.clientY ** 2);
-
-      if (distance < 150) {
+      if (event.touches.length > 1) {
         event.preventDefault();
+      } else {
+        const touch = event.touches[0];
+        const distance = Math.sqrt(touch.clientX ** 2 + touch.clientY ** 2);
+        if (distance < 150) {
+          event.preventDefault();
+        }
       }
     };
 
