@@ -16,14 +16,24 @@
  */
 
 // ------------------------------------------------------------------------
-export const financialLastUpdated = '23년 02월 07일 13시';
+export const financialLastUpdated = '23년 02월 25일 15시';
 export const financialNow = {
-  total: '1119122',
+  total: '919190',
   income: '380796',
-  spending: ''
+  spending: '200000'
 };
 
 export const financialHistory = [
+  {
+    id: '18',
+    year: '2023',
+    month: '02',
+    date: '24',
+    condition: 'spending',
+    amount: '200000',
+    detail: '2월 평일정모',
+    location: '골프존파크 수지24'
+  },
   {
     id: '17',
     year: '2023',

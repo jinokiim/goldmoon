@@ -20,6 +20,7 @@ import EmptySearchIcon from '@/src/assets/icons/empty_search_icon';
 import { members, membersLastUpdated } from '@/src/data/membersData';
 import CheckGreenIcon from '@/src/assets/icons/check_green';
 import XIcon from '@/src/assets/icons/x_icon';
+import InjuryIcon from '@/src/assets/icons/injury_icon';
 import { authState } from '@/src/recoil/atom';
 import { useRecoilState } from 'recoil';
 import MoveToInit from '@/src/pages/MoveToInit';
@@ -27,6 +28,20 @@ import Lottie from 'react-lottie';
 import { defaultLoadingOptions } from '@/src/pages';
 
 // ----------------------------------------------------------------------
+
+const getIconByStatus = (status: string) => {
+  console.log(status);
+  switch (status) {
+    case '1':
+      return <CheckGreenIcon />;
+    case '0':
+      return <XIcon />;
+    case '부상':
+      return <InjuryIcon />;
+    default:
+      return 'status';
+  }
+};
 
 const IndexPage = function () {
   const router = useRouter();
@@ -97,93 +112,64 @@ const IndexPage = function () {
                         borderRadius: '12px'
                       }}
                     >
-                      <Box sx={{ pt: 5, pb: 1.5, px: 2.5 }}>
+                      <Box sx={{ pt: 1.5, pb: 1.5, px: 2.5 }}>
                         <Stack justifyContent="space-between" alignItems="center" direction="row">
                           <Stack direction="column" alignItems="center">
                             <Typography variant="body1" sx={{ mb: 1 }}>
                               {period.attendance.a.year.toString().slice(2, 4)}년{' '}
                               {period.attendance.a.month}월
                             </Typography>
-                            {
+                            {getIconByStatus(
                               /* @ts-ignore */
                               item.attendance[period.attendance.a.year][
                                 period.attendance.a.month - 1
-                              ] === '1' ? (
-                                <CheckGreenIcon />
-                              ) : /* @ts-ignore */
-                              item.attendance[period.attendance.a.year][
-                                  period.attendance.a.month - 1
-                                ] === '0' ? (
-                                <XIcon />
-                              ) : (
-                                <Typography variant="body1" sx={{ height: 50 }}>
-                                  {
-                                    /* @ts-ignore */
-                                    item.attendance[period.attendance.a.year][
-                                      period.attendance.a.month - 1
-                                    ]
-                                  }
-                                </Typography>
-                              )
-                            }
+                              ]
+                            )}
                           </Stack>
                           <Stack direction="column" alignItems="center">
                             <Typography variant="body1" sx={{ mb: 1 }}>
                               {period.attendance.b.year.toString().slice(2, 4)}년{' '}
                               {period.attendance.b.month}월
                             </Typography>
-                            {
+                            {getIconByStatus(
                               /* @ts-ignore */
                               item.attendance[period.attendance.b.year][
                                 period.attendance.b.month - 1
-                              ] === '1' ? (
-                                <CheckGreenIcon />
-                              ) : /* @ts-ignore */
-                              item.attendance[period.attendance.b.year][
-                                  period.attendance.b.month - 1
-                                ] === '0' ? (
-                                <XIcon />
-                              ) : (
-                                <Typography variant="body1" sx={{ height: 50 }}>
-                                  {
-                                    /* @ts-ignore */
-                                    item.attendance[period.attendance.b.year][
-                                      period.attendance.b.month - 1
-                                    ]
-                                  }
-                                </Typography>
-                              )
-                            }
+                              ]
+                            )}
                           </Stack>
                           <Stack direction="column" alignItems="center">
                             <Typography variant="body1" sx={{ mb: 1 }}>
                               {period.attendance.c.year.toString().slice(2, 4)}년{' '}
                               {period.attendance.c.month}월
                             </Typography>
-                            {
+                            {getIconByStatus(
                               /* @ts-ignore */
                               item.attendance[period.attendance.c.year][
                                 period.attendance.c.month - 1
-                              ] === '1' ? (
-                                <CheckGreenIcon />
-                              ) : /* @ts-ignore */
-                              item.attendance[period.attendance.c.year][
-                                  period.attendance.c.month - 1
-                                ] === '0' ? (
-                                <XIcon />
-                              ) : (
-                                <Typography variant="body1" sx={{ height: 50 }}>
-                                  {
-                                    /* @ts-ignore */
-                                    item.attendance[period.attendance.c.year][
-                                      period.attendance.c.month - 1
-                                    ]
-                                  }
-                                </Typography>
-                              )
-                            }
+                              ]
+                            )}
                           </Stack>
                         </Stack>
+                        {
+                          /* @ts-ignore */
+                          item.attendance[period.attendance.b.year][
+                            period.attendance.b.month - 1
+                          ] === '0' &&
+                            /* @ts-ignore */
+                            item.attendance[period.attendance.c.year][
+                              period.attendance.c.month - 1
+                            ] === '0' && (
+                              <>
+                                <Box sx={{ textAlign: 'center' }}>
+                                  <Typography variant="body2">
+                                    저번달에 출석을 하지 않았어요!
+                                  </Typography>
+                                  <Typography variant="body2">이번달은 꼭 참여해주세요</Typography>
+                                </Box>
+                              </>
+                            )
+                        }
                       </Box>
                     </Paper>
                   </Box>
@@ -197,93 +183,62 @@ const IndexPage = function () {
                         borderRadius: '12px'
                       }}
                     >
-                      <Box sx={{ pt: 5, pb: 1.5, px: 2.5 }}>
+                      <Box sx={{ pt: 1.5, pb: 1.5, px: 2.5 }}>
                         <Stack justifyContent="space-between" alignItems="center" direction="row">
                           <Stack direction="column" alignItems="center">
                             <Typography variant="body1" sx={{ mb: 1 }}>
                               {period.membershipFee.a.year.toString().slice(2, 4)}년{' '}
                               {period.membershipFee.a.month}월
                             </Typography>
-                            {
+                            {getIconByStatus(
                               /* @ts-ignore */
                               item.membership_fee[period.membershipFee.a.year][
                                 period.membershipFee.a.month - 1
-                              ] === '1' ? (
-                                <CheckGreenIcon />
-                              ) : /* @ts-ignore */
-                              item.membership_fee[period.membershipFee.a.year][
-                                  period.membershipFee.a.month - 1
-                                ] === '0' ? (
-                                <XIcon />
-                              ) : (
-                                <Typography variant="body1" sx={{ height: 50 }}>
-                                  {
-                                    /* @ts-ignore */
-                                    item.membership_fee[period.membershipFee.a.year][
-                                      period.membershipFee.a.month - 1
-                                    ]
-                                  }
-                                </Typography>
-                              )
-                            }
+                              ]
+                            )}
                           </Stack>
                           <Stack direction="column" alignItems="center">
                             <Typography variant="body1" sx={{ mb: 1 }}>
                               {period.membershipFee.b.year.toString().slice(2, 4)}년{' '}
                               {period.membershipFee.b.month}월
                             </Typography>
-                            {
+                            {getIconByStatus(
                               /* @ts-ignore */
                               item.membership_fee[period.membershipFee.b.year][
                                 period.membershipFee.b.month - 1
-                              ] === '1' ? (
-                                <CheckGreenIcon />
-                              ) : /* @ts-ignore */
-                              item.membership_fee[period.membershipFee.b.year][
-                                  period.membershipFee.b.month - 1
-                                ] === '0' ? (
-                                <XIcon />
-                              ) : (
-                                <Typography variant="body1" sx={{ height: 50 }}>
-                                  {
-                                    /* @ts-ignore */
-                                    item.membership_fee[period.membershipFee.b.year][
-                                      period.membershipFee.b.month - 1
-                                    ]
-                                  }
-                                </Typography>
-                              )
-                            }
+                              ]
+                            )}
                           </Stack>
                           <Stack direction="column" alignItems="center">
                             <Typography variant="body1" sx={{ mb: 1 }}>
                               {period.membershipFee.c.year.toString().slice(2, 4)}년{' '}
                               {period.membershipFee.c.month}월
                             </Typography>
-                            {
+                            {getIconByStatus(
                               /* @ts-ignore */
                               item.membership_fee[period.membershipFee.c.year][
                                 period.membershipFee.c.month - 1
-                              ] === '1' ? (
-                                <CheckGreenIcon />
-                              ) : /* @ts-ignore */
-                              item.membership_fee[period.membershipFee.c.year][
-                                  period.membershipFee.c.month - 1
-                                ] === '0' ? (
-                                <XIcon />
-                              ) : (
-                                <Typography variant="body1" sx={{ height: 50 }}>
-                                  {
-                                    /* @ts-ignore */
-                                    item.membership_fee[period.membershipFee.c.year][
-                                      period.membershipFee.c.month - 1
-                                    ]
-                                  }
-                                </Typography>
-                              )
-                            }
+                              ]
+                            )}
                           </Stack>
                         </Stack>
+                        {
+                          /* @ts-ignore */
+                          item.membership_fee[period.membershipFee.b.year][
+                            period.membershipFee.b.month - 1
+                          ] === '0' && (
+                            <>
+                              <Box sx={{ textAlign: 'center' }}>
+                                <Typography variant="body2">
+                                  아직 회비를 납부하지 않았어요!
+                                </Typography>
+                                <Typography variant="body2">
+                                  7일 이전까지 꼭 납부해주세요
+                                </Typography>
+                              </Box>
+                            </>
+                          )
+                        }
                       </Box>
                     </Paper>
                   </Box>
