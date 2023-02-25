@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import ThemeConfig from '../theme';
 import ThemePrimaryColor from '../components/ThemePrimaryColor';
 import Head from 'next/head';
+import { SnackbarProvider } from 'notistack';
 
 const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props;
@@ -18,7 +19,17 @@ const MyApp = (props: AppProps) => {
       </Head>
       <ThemeConfig>
         <ThemePrimaryColor>
-          <Component {...pageProps} />
+          <SnackbarProvider
+            dense
+            maxSnack={1}
+            autoHideDuration={1000}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center'
+            }}
+          >
+            <Component {...pageProps} />
+          </SnackbarProvider>
         </ThemePrimaryColor>
       </ThemeConfig>
     </>

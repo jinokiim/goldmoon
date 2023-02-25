@@ -26,6 +26,7 @@ import MoveToInit from '../MoveToInit';
 import Lottie from 'react-lottie';
 import { defaultLoadingOptions } from '..';
 import InformationIcon from '@/src/assets/menu/information_icon';
+import { useSnackbar } from 'notistack';
 
 // ----------------------------------------------------------------------
 
@@ -95,6 +96,21 @@ const IndexPage = function () {
   const [authCheck] = useRecoilState(authState);
 
   const [mounted, setMounted] = useState(false);
+
+  const copyAccount = '79796168435';
+
+  const { enqueueSnackbar } = useSnackbar();
+
+  const handleCopyClick = () => {
+    navigator.clipboard
+      .writeText(copyAccount)
+      .then(() => console.log('Text copied to clipboard'))
+      .catch((error) => console.error('Failed to copy text: ', error));
+    handleClick('복사가 완료되었습니다.');
+  };
+  const handleClick = (text: string) => {
+    enqueueSnackbar(text, { variant: 'default' });
+  };
 
   useEffect(() => {
     setMounted(true);
@@ -172,13 +188,25 @@ const IndexPage = function () {
                 </Paper>
               </Box>
               {/* 출석 & 회비납부 확인 */}
-              <Box sx={{ mb: 4.5 }}>
+              <Box sx={{ mb: 2.5 }}>
                 <StyledButton
                   sx={{ fontWeight: 600 }}
                   onClick={() => router.push('/main/attendance')}
                 >
                   출석 & 회비납부 확인
                 </StyledButton>
+              </Box>
+              <Box sx={{ mb: 2.5, textAlign: 'right' }}>
+                <Typography
+                  variant="body3"
+                  onClick={handleCopyClick}
+                  sx={{ color: COLORS.grey500 }}
+                >
+                  카카오뱅크 79796168435{' '}
+                  <Box component="span" sx={{ textDecoration: 'underline' }}>
+                    눌러서 복사하기
+                  </Box>
+                </Typography>
               </Box>
             </Box>
 
