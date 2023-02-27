@@ -27,6 +27,7 @@ import Lottie from 'react-lottie';
 import { defaultLoadingOptions } from '..';
 import InformationIcon from '@/src/assets/menu/information_icon';
 import { useSnackbar } from 'notistack';
+import EventMenu from '@/src/assets/menu/event_menu_icon';
 
 // ----------------------------------------------------------------------
 
@@ -66,6 +67,15 @@ const menuLists = [
     icon: (
       <Box className="GoldmoonIcon" sx={{ ...menuIcon }}>
         <MakeTeam />
+      </Box>
+    )
+  },
+  {
+    title: '이벤트',
+    url: 'event',
+    icon: (
+      <Box className="GoldmoonIcon" sx={{ ...menuIcon }}>
+        <EventMenu />
       </Box>
     )
   },
