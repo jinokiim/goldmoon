@@ -2,7 +2,7 @@
 
 // import Button from '@mui/material/Button';
 import Layout from '@/src/layouts/main';
-import { Box, ButtonBase, Paper, Stack, SxProps, Typography } from '@mui/material';
+import { Box, Button, ButtonBase, Paper, Stack, SxProps, Typography } from '@mui/material';
 // import useSettings from '@/src/hooks/useSettings';
 
 import { useEffect, useState } from 'react';
@@ -21,7 +21,7 @@ import MakeTeam from '@/src/assets/menu/make_team_icon';
 // import { formatter } from '../api/function';
 
 import { useRecoilState } from 'recoil';
-import { authState } from '@/src/recoil/atom';
+import { authState, memberState } from '@/src/recoil/atom';
 import MoveToInit from '../MoveToInit';
 import Lottie from 'react-lottie';
 import { defaultLoadingOptions } from '..';
@@ -104,6 +104,7 @@ const IndexPage = function () {
   // const date = new Date();
 
   const [authCheck] = useRecoilState(authState);
+  const [memberCheck] = useRecoilState(memberState);
 
   const [mounted, setMounted] = useState(false);
 
@@ -254,6 +255,16 @@ const IndexPage = function () {
               {menuBox}
             </Box>
           </Box>
+          {memberCheck === 'manager' && (
+            <Box sx={{ m: 2.5 }}>
+              <Button
+                sx={{ fontWeight: 600, backgroundColor: COLORS.grey300, color: COLORS.white }}
+                onClick={() => router.push('/admin/manage')}
+              >
+                회원 출석 납부 현황 확인
+              </Button>
+            </Box>
+          )}
         </Box>
       }
     />

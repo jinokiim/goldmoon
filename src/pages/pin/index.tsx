@@ -16,13 +16,14 @@ import AppHeader from '@/src/components/Header';
 import _ from 'lodash';
 
 import { useRecoilState } from 'recoil';
-import { authState } from '@/src/recoil/atom';
+import { authState, memberState } from '@/src/recoil/atom';
 import { defaultLoadingOptions } from '..';
 import Lottie from 'react-lottie';
 
 // ----------------------------------------------------------------------
 
 const CODE = [1, 1, 0, 2];
+const MANAGER_CODE = [0, 9, 3, 0];
 const maxInputSize = 4;
 let defaultPinHint = '골드문 입장코드를 입력해주세요';
 const errMsgStyles = {
@@ -38,6 +39,7 @@ const IndexPage = function () {
 
   // const { headerHeight } = useSettings();
   const [authCheck, setAuthCheck] = useRecoilState(authState);
+  const [memberType, setMemberType] = useRecoilState(memberState);
 
   const [isErrorMsg, setIsErrorMsg] = useState<boolean>(false);
 
@@ -52,7 +54,15 @@ const IndexPage = function () {
 
   const userCheckOk = () => {
     setAuthCheck(true);
+    setMemberType('member');
     console.log(authCheck);
+    console.log(memberType);
+  };
+  const managerCheckOk = () => {
+    setAuthCheck(true);
+    setMemberType('manager');
+    console.log(authCheck);
+    console.log(memberType);
   };
 
   const setPasswordFunc = (password: number[] | string[]) => {
@@ -67,9 +77,13 @@ const IndexPage = function () {
 
   function onSubmit(password: number[] | string[]) {
     const isEqual = _.isEqual(password, CODE);
+    const isManagerEqual = _.isEqual(password, MANAGER_CODE);
     // let message = '';
     if (isEqual) {
       userCheckOk();
+      router.push('/main');
+    } else if (isManagerEqual) {
+      managerCheckOk();
       router.push('/main');
     } else {
       setIsErrorMsg(true);

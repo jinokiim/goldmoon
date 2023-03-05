@@ -332,7 +332,7 @@ export interface SearchBarProps extends InputProps {
   // searchStyle?: string;
 }
 
-function CommonSearch(props: SearchBarProps) {
+export function CommonSearch(props: SearchBarProps) {
   const {
     placeholder,
     onIconClick = () => {},

@@ -10,3 +10,9 @@ export const authState = atom({
   default: false,
   effects_UNSTABLE: [persistAtom]
 });
+
+export const memberState = atom({
+  key: 'mamber-state',
+  default: 'member',
+  effects_UNSTABLE: [persistAtom]
+});
