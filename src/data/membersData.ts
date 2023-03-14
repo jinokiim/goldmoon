@@ -1,7 +1,7 @@
 /**
   { id: '', name: '', gender: 'mf', birth: '', attendance: { '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'], '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, membership_fee: { '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],  '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, reg_date: '2023-00', withdrawal_date: '', bird: 0, is_status: 'y' },
  */
-export const totalMembers = [37, 40, 39, 41, 40, 42, 50, 45];
+export const totalMembers = [37, 40, 39, 41, 40, 42, 50, 45, 49];
 export const membersLastUpdated = '23년 03월 07일 10시';
 export const members = [
   {
@@ -218,7 +218,7 @@ export const members = [
     reg_date: '2022-05',
     withdrawal_date: '',
     bird: 5,
-    is_status: 'y'
+    is_status: ''
   },
   {
     id: '13',
