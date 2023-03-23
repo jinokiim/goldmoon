@@ -883,7 +883,7 @@ export const members = [
     },
     reg_date: '2023-03',
     withdrawal_date: '',
-    bird: 4,
+    bird: 2,
     is_status: 'y'
   },
   {
