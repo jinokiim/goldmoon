@@ -2,7 +2,7 @@
   { id: '', name: '', gender: 'mf', birth: '', attendance: { '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'], '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, membership_fee: { '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],  '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, reg_date: '2023-00', withdrawal_date: '', bird: 0, is_status: 'y' },
  */
 export const totalMembers = [37, 40, 39, 41, 40, 42, 50, 45, 48, 46];
-export const membersLastUpdated = "23년 04월 06일 10시";
+export const membersLastUpdated = "23년 04월 07일 23시";
 export const members = [
   {
     id: "1",
