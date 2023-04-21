@@ -15,93 +15,71 @@ export const financialHistory = [
     id: '24',
     year: '2023',
     month: '04',
-    history: [
-      {
-        date: '16',
-        condition: 'spending',
-        amount: '40000',
-        detail: '4월 주말정모',
-        location: '골프존 파크 법조타운점'
-      }
-    ]
+    date: '16',
+    condition: 'spending',
+    amount: '40000',
+    detail: '4월 주말정모',
+    location: '골프존 파크 법조타운점'
   },
   {
     id: '23',
     year: '2023',
     month: '04',
-    history: [
-      { date: '07', condition: 'income', amount: '390000', detail: '4월 회비금 입금', location: '' }
-    ]
+    date: '07',
+    condition: 'income',
+    amount: '390000',
+    detail: '4월 회비금 입금',
+    location: ''
   },
   {
     id: '22',
     year: '2023',
     month: '03',
-    history: [
-      {
-        date: '25',
-        condition: 'spending',
-        amount: '70000',
-        detail: '3월 평일정모',
-        location: '골프존파크 광교레이크'
-      }
-    ]
+    date: '25',
+    condition: 'spending',
+    amount: '70000',
+    detail: '3월 평일정모',
+    location: '골프존파크 광교레이크'
   },
   {
     id: '22',
     year: '2023',
     month: '03',
-    history: [
-      {
-        date: '25',
-        condition: 'spending',
-        amount: '90000',
-        detail: '3월 주말정모 새대전',
-        location: '골프존파크 수지24'
-      }
-    ]
+    date: '25',
+    condition: 'spending',
+    amount: '90000',
+    detail: '3월 주말정모 새대전',
+    location: '골프존파크 수지24'
   },
   {
     id: '21',
     year: '2023',
     month: '03',
-    history: [
-      {
-        date: '10',
-        condition: 'spending',
-        amount: '210000',
-        detail: '새대전 상품 구매',
-        location: ''
-      }
-    ]
+    date: '10',
+    condition: 'spending',
+    amount: '210000',
+    detail: '새대전 상품 구매',
+    location: ''
   },
   {
     id: '20',
     year: '2023',
     month: '03',
-    history: [
-      {
-        date: '07',
-        condition: 'income',
-        amount: '500000',
-        detail: '3월 회비금입금',
-        location: ''
-      }
-    ]
+    date: '07',
+    condition: 'income',
+    amount: '500000',
+    detail: '3월 회비금입금',
+    location: ''
   },
   {
     id: '19',
     year: '2023',
     month: '02',
-    history: [
-      {
-        date: '25',
-        condition: 'income',
-        amount: '68',
-        detail: '입출금 통장 이자',
-        location: ''
-      }
-    ]
+    date: '25',
+    condition: 'income',
+    amount: '68',
+    detail: '입출금 통장 이자',
+    location: ''
   },
   {
     id: '18',
