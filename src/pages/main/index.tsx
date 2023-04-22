@@ -28,6 +28,7 @@ import { defaultLoadingOptions } from '..';
 import InformationIcon from '@/src/assets/menu/information_icon';
 import { useSnackbar } from 'notistack';
 import EventMenu from '@/src/assets/menu/event_menu_icon';
+import PaymentMenu from '@/src/assets/menu/payment_menu_icon';
 
 // ----------------------------------------------------------------------
 
@@ -81,10 +82,10 @@ const menuLists = [
   },
   {
     title: '정산하기',
-    url: 'empty',
+    url: 'payment',
     icon: (
       <Box className="GoldmoonIcon" sx={{ ...menuIcon }}>
-        <EmptyMenu />
+        <PaymentMenu />
       </Box>
     )
   },
