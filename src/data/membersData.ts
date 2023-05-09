@@ -38,7 +38,7 @@ export const members = [
     },
     reg_date: '2022-04',
     withdrawal_date: '',
-    bird: 4,
+    bird: 5,
     is_status: 'y'
   },
   {
@@ -470,7 +470,7 @@ export const members = [
     },
     reg_date: '2022-11',
     withdrawal_date: '',
-    bird: 3,
+    bird: 4,
     is_status: 'y'
   },
   {
@@ -722,7 +722,7 @@ export const members = [
     },
     reg_date: '2023-01',
     withdrawal_date: '',
-    bird: 5,
+    bird: 4,
     is_status: 'y'
   },
   {
@@ -794,7 +794,7 @@ export const members = [
     },
     reg_date: '2023-01',
     withdrawal_date: '',
-    bird: 1,
+    bird: 2,
     is_status: 'y'
   },
   {
