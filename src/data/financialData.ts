@@ -3,14 +3,44 @@
  */
 
 // ------------------------------------------------------------------------
-export const financialLastUpdated = '23년 04월 21일 16시';
+export const financialLastUpdated = '23년 05월 16일 12시';
 export const financialNow = {
-  total: '1399284',
-  income: '390000',
-  spending: '40000'
+  total: '1679399',
+  income: '400000',
+  spending: '60000'
 };
 
 export const financialHistory = [
+  {
+    id: '27',
+    year: '2023',
+    month: '05',
+    date: '13',
+    condition: 'spending',
+    amount: '60000',
+    detail: '5월 주말정모',
+    location: '골프존 파크 경기대점'
+  },
+  {
+    id: '26',
+    year: '2023',
+    month: '05',
+    date: '07',
+    condition: 'income',
+    amount: '400000',
+    detail: '5월 회비입금',
+    location: ''
+  },
+  {
+    id: '25',
+    year: '2023',
+    month: '04',
+    date: '29',
+    condition: 'spending',
+    amount: '60000',
+    detail: '4월 평일정모',
+    location: '골프존 파크 레이크점'
+  },
   {
     id: '24',
     year: '2023',
