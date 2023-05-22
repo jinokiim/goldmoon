@@ -5,7 +5,7 @@
 // ------------------------------------------------------------------------
 export const financialLastUpdated = '23년 05월 22일 10시';
 export const financialNow = {
-  total: '1679399',
+  total: '1489399',
   income: '400000',
   spending: '250000'
 };
