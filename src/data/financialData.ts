@@ -1,16 +1,26 @@
 /**
-{id: '',year: '2023',month: '',history: [{date: '',condition: '',amount: '',detail: '',location: ''}]},
+{id: '',year: '2023',month: '',date: '',condition: '',amount: '',detail: '',location: ''},
  */
 
 // ------------------------------------------------------------------------
-export const financialLastUpdated = '23년 05월 16일 12시';
+export const financialLastUpdated = '23년 05월 22일 10시';
 export const financialNow = {
   total: '1679399',
   income: '400000',
-  spending: '60000'
+  spending: '250000'
 };
 
 export const financialHistory = [
+  {
+    id: '28',
+    year: '2023',
+    month: '05',
+    date: '20',
+    condition: 'spending',
+    amount: '190000',
+    detail: '5월 정기라운딩 상품 구매',
+    location: ''
+  },
   {
     id: '27',
     year: '2023',
