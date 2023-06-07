@@ -91,11 +91,11 @@ const MainNotice = () => {
               술자리와 같은 친목 목적의 자리도 괜찮고 정모 뒷풀이만 오셔도 되어요
             </Typography>
           </ListItem>
-          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+          {/* <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               월 회비는 1만원이며 총무 김진호가 카카오뱅크 골드문 통장으로 투명하게 관리하고 있어요
             </Typography>
-          </ListItem>
+          </ListItem> */}
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               정모 외의 벙은 벙주의 재량으로 정산해 주세요
@@ -129,19 +129,26 @@ const MainNotice = () => {
           </Typography>
         </Box>
         <Box sx={{ color: '#4E5968' }}>
-          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+          {/* <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               매달 2주차 토요일 14시, 4주차 금요일 19시에 스크린골프를 진행해요
+            </Typography>
+          </ListItem> */}
+          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+            <Typography variant="h7" fontWeight="350" color="#4E5968">
+              매달 2주차 토요일 14시는 스크린골프, 4주차 토요일은 단체라운딩을 진행해요
+            </Typography>
+          </ListItem>
+
+          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+            <Typography variant="h7" fontWeight="350" color="#4E5968">
+              {/* 정모에 참여하면 스크린 가격에서 5천원을 지원해드려요(한달 최대 만원) */}
+              정모에 참여하면 스크린 가격에서 5천원을 지원해드려요(한달 최대 만원, 회비소진시까지)
             </Typography>
           </ListItem>
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               끝나고 뒤풀이도 있으니 많은 참석 바랍니다
-            </Typography>
-          </ListItem>
-          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
-            <Typography variant="h7" fontWeight="350" color="#4E5968">
-              정모에 참여하면 스크린 가격에서 5천원을 지원해드려요(한달 최대 만원)
             </Typography>
           </ListItem>
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
@@ -163,7 +170,7 @@ const MainNotice = () => {
           </Typography>
         </Box>
         <Box sx={{ color: '#4E5968' }}>
-          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+          {/* <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               월 회비는 만원이고 매달 7일 23:59이전까지 보내주세요
             </Typography>
@@ -181,6 +188,17 @@ const MainNotice = () => {
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               총무는 회비 면제에요
+            </Typography>
+          </ListItem> */}
+          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+            <Typography variant="h7" fontWeight="350" color="#4E5968">
+              23년 6월부터 회비를 걷지 않고 있어요
+            </Typography>
+          </ListItem>
+          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+            <Typography variant="h7" fontWeight="350" color="#4E5968">
+              남은 회비 소진 할때까지 스크린 정모에서 5천원을 지원해드립니다(단 23년 6월 이후
+              신규회원 제외)
             </Typography>
           </ListItem>
         </Box>
