@@ -21,7 +21,6 @@ export const financialHistory = [
     detail: "6월 스크린 정모",
     location: "",
   },
-
   {
     id: "31",
     year: "2023",
@@ -52,7 +51,6 @@ export const financialHistory = [
     detail: "김종완 23년 7-12월 회비 환불",
     location: "",
   },
-
   {
     id: "28",
     year: "2023",
