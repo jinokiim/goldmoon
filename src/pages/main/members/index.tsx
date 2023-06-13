@@ -53,11 +53,13 @@ const IndexPage = function () {
   const [authCheck] = useRecoilState(authState);
 
   const [mounted, setMounted] = useState(false);
-  const [sortedMembers, setSortedMembers] = useState<memberType[]>([]);
+  const [sortedMembers, setSortedMembers] = useState<memberType[] | undefined>(
+    members as memberType[] | undefined
+  );
 
   const sortMemberDataFunc = (memberData: memberType[]) => {
-    const filterByStatus = memberData.filter((member) => member.is_status === 'y');
-    const newMembers = filterByStatus.sort((firstObject: memberType, secondObject: memberType) =>
+    const filterByStatus = memberData?.filter((member) => member.is_status === 'y');
+    const newMembers = filterByStatus?.sort((firstObject: memberType, secondObject: memberType) =>
       firstObject.name > secondObject.name ? 1 : -1
     );
 
@@ -66,8 +68,8 @@ const IndexPage = function () {
   };
 
   useEffect(() => {
-    sortMemberDataFunc(members);
-  }, []);
+    members !== undefined && sortMemberDataFunc(members as memberType[]);
+  }, [members]);
 
   return mounted && authCheck === true ? (
     <Layout
@@ -95,7 +97,7 @@ const IndexPage = function () {
               <Typography variant="h5">
                 골드문 멤버는{' '}
                 <Box component="span" color={COLORS.secondary700}>
-                  {sortedMembers.length}
+                  {sortedMembers?.length}
                 </Box>
                 명 이에요
               </Typography>
@@ -110,7 +112,7 @@ const IndexPage = function () {
               />
             </Box>
             <Box sx={{ p: 2, backgroundColor: COLORS.backgroundDefault, textAlign: 'center' }}>
-              {sortedMembers.map((item, index) => {
+              {sortedMembers?.map((item, index) => {
                 return (
                   <>
                     <Badge

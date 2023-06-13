@@ -88,7 +88,7 @@ const IndexPage = function () {
   };
 
   useEffect(() => {
-    sortMemberDataFunc(members);
+    sortMemberDataFunc(members as memberType[]);
   }, []);
 
   return mounted && authCheck === true ? (

@@ -90,14 +90,14 @@ const IndexPage = function () {
               if (search === null || search === '') {
                 return false;
               }
-              return item.name === search;
+              return item?.name === search;
             })
             ?.map((item, index) => (
               <Box key={index} sx={{ px: 2.5 }}>
                 <Typography variant="badgeLabelLarge">{membersLastUpdated}를 기준으로</Typography>
                 <Typography variant="h4">
                   <Box component="span" sx={{ color: COLORS.secondary700 }}>
-                    {item.name}
+                    {item?.name}
                   </Box>
                   님의 출석 & 회비 납부 현황이에요
                 </Typography>
