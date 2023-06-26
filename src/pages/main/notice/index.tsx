@@ -227,9 +227,9 @@ const MainNotice = () => {
             </Typography>
           </ListItem>
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
-            <Typography variant="h7" fontWeight="350" color="#4E5968">
+            {/* <Typography variant="h7" fontWeight="350" color="#4E5968">
               매달 7일까지 회비를 납부하지 않는 회원
-            </Typography>
+            </Typography> */}
           </ListItem>
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
