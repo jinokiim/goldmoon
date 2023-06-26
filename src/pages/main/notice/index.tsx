@@ -226,11 +226,11 @@ const MainNotice = () => {
               정모 참석 투표에 참석하지 않은 회원
             </Typography>
           </ListItem>
-          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
-            {/* <Typography variant="h7" fontWeight="350" color="#4E5968">
+          {/* <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+            <Typography variant="h7" fontWeight="350" color="#4E5968">
               매달 7일까지 회비를 납부하지 않는 회원
-            </Typography> */}
-          </ListItem>
+            </Typography> 
+          </ListItem>*/}
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               타인에게 불쾌한 언행을 하여 피해를 끼치는 회원
