@@ -1,9 +1,9 @@
 /**
   ,{ id: '', name: '', gender: 'mf', birth: '', attendance: { '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'], '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, membership_fee: { '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],  '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, reg_date: '2023-00', withdrawal_date: '', bird: 0, is_status: 'y' }
  */
-// [37, 40, 39, 41, 40, 42, 50, 45, 48, 46];
-export const totalMembers = [40, 39, 41, 40, 42, 50, 45, 48, 46, 45];
-export const membersLastUpdated = "23년 06월 12일 10시";
+// [37, 40, 39, 41, 40, 42, 50, 45, 48, 46, 45, 37];
+export const totalMembers = [39, 41, 40, 42, 50, 45, 48, 46, 45, 37];
+export const membersLastUpdated = "23년 07월 11일 10시";
 export const members = [
   {
     id: "1",
@@ -374,9 +374,9 @@ export const members = [
       "2023": ["1", "1", "1", "1", "1", "0", "0", "0", "0", "0", "0", "0"],
     },
     reg_date: "2022-10",
-    withdrawal_date: "2023-07",
+    withdrawal_date: "",
     bird: 4,
-    is_status: "n",
+    is_status: "y",
   },
   {
     id: "21",
@@ -429,7 +429,7 @@ export const members = [
     },
     reg_date: "2022-10",
     withdrawal_date: "",
-    bird: 4,
+    bird: 3,
     is_status: "y",
   },
   {
@@ -473,7 +473,7 @@ export const members = [
     },
     reg_date: "2022-10",
     withdrawal_date: "",
-    bird: 4,
+    bird: 3,
     is_status: "y",
   },
   {
@@ -617,7 +617,7 @@ export const members = [
     },
     reg_date: "2022-12",
     withdrawal_date: "",
-    bird: 3,
+    bird: 4,
     is_status: "y",
   },
   {
@@ -815,7 +815,7 @@ export const members = [
     },
     reg_date: "2022-04",
     withdrawal_date: "",
-    bird: 3,
+    bird: 4,
     is_status: "y",
   },
   {
@@ -833,7 +833,7 @@ export const members = [
     },
     reg_date: "2023-01",
     withdrawal_date: "",
-    bird: 2,
+    bird: 1,
     is_status: "y",
   },
   {
@@ -1147,6 +1147,24 @@ export const members = [
     name: "권혁기",
     gender: "m",
     birth: "95",
+    attendance: {
+      "2022": ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+      "2023": ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+    },
+    membership_fee: {
+      "2022": ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+      "2023": ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+    },
+    reg_date: "2023-06",
+    withdrawal_date: "",
+    bird: 4,
+    is_status: "y",
+  },
+  {
+    id: "60",
+    name: "박정환",
+    gender: "m",
+    birth: "89",
     attendance: {
       "2022": ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
       "2023": ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
