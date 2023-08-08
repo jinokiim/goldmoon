@@ -33,7 +33,7 @@ export function FinalStep({
     const shuffledMembers = selectedMembers.sort(() => Math.random() - 0.5);
 
     const subarrays: string[][] = [];
-    const chunkSize: number = Math.ceil(selectedMembers.length / rooms);
+    const chunkSize: number = Math.floor(selectedMembers.length / rooms);
     let startIndex = 0;
     for (let i = 0; i < rooms; i++) {
       const endIndex = Math.min(startIndex + chunkSize, selectedMembers.length);
