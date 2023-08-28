@@ -903,7 +903,7 @@ export const members = [
     reg_date: '2023-03',
     withdrawal_date: '',
     bird: 2,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '50',
@@ -1065,7 +1065,7 @@ export const members = [
     reg_date: '2023-06',
     withdrawal_date: '2023-07',
     bird: 4,
-    is_status: 'n'
+    is_status: 'y'
   },
   {
     id: '59',
@@ -1083,7 +1083,7 @@ export const members = [
     reg_date: '2023-06',
     withdrawal_date: '2023-07',
     bird: 4,
-    is_status: 'n'
+    is_status: 'y'
   },
   {
     id: '60',
