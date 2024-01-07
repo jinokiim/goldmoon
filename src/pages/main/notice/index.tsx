@@ -45,7 +45,7 @@ const IndexPage = function () {
           >
             <Box sx={{ height: '100%', px: 1 }}>
               <Box sx={{ my: 2 }}>
-                <Typography variant="h2">골드문 공지사항</Typography>
+                <Typography variant="h2">환영합니다! 아래는 골드문 공지사항이에요</Typography>
               </Box>
               <Box>
                 <MainNotice />
@@ -139,22 +139,39 @@ const MainNotice = () => {
               매달 2주차 토요일 14시는 스크린골프, 4주차 토요일은 단체라운딩을 진행해요
             </Typography>
           </ListItem>
+          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+            <Typography variant="h7" fontWeight="350" color="#4E5968">
+              정모는 유동적으로 변경될 수 있어요
+            </Typography>
+          </ListItem>
 
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               {/* 정모에 참여하면 스크린 가격에서 5천원을 지원해드려요(한달 최대 만원) */}
-              정모에 참여하면 스크린 가격에서 5천원을 지원해드려요(한달 최대 만원, 회비소진시까지)
+              스크린 정모는{' '}
+              <Box component="span" sx={{ fontWeight: 700 }}>
+                5천원
+              </Box>
+              , 라운딩 정모는{' '}
+              <Box component="span" sx={{ fontWeight: 700 }}>
+                만원
+              </Box>
+              을 지원해드려요
             </Typography>
           </ListItem>
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
-              끝나고 뒤풀이도 있으니 많은 참석 바랍니다
+              끝나고 뒤풀이가 있다면 많은 참석 바랍니다
             </Typography>
           </ListItem>
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
-              뒤풀이 정산은 무조건 1/n 으로 나눌게요. 인원이 많은 만큼 늦게 온사람, 누가 안주랑 술을
-              안먹었는지 파악하기 어려워요.
+              뒤풀이 정산은{' '}
+              <Box component="span" sx={{ fontWeight: 700 }}>
+                1/n
+              </Box>
+              으로 나눌수도 있어요. 인원이 많은 만큼 늦게 온사람, 누가 안주랑 술을 안먹었는지
+              파악하기 어려워요
             </Typography>
           </ListItem>
         </Box>
@@ -170,14 +187,30 @@ const MainNotice = () => {
           </Typography>
         </Box>
         <Box sx={{ color: '#4E5968' }}>
-          {/* <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
-              월 회비는 만원이고 매달 7일 23:59이전까지 보내주세요
+              월 회비는{' '}
+              <Box component="span" sx={{ fontWeight: 700 }}>
+                만원
+              </Box>
+              이고
+              <Box component="span" sx={{ fontWeight: 700 }}>
+                매달 7일 23:59
+              </Box>
+              이전까지 보내주세요
             </Typography>
           </ListItem>
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
-              79796168435 카카오뱅크 김진호 로 입급해주세요
+              가입한 달은 회비를 내지않아도 괜찮아요
+            </Typography>
+          </ListItem>
+          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+            <Typography variant="h7" fontWeight="350" color="#4E5968">
+              <Box component="span" sx={{ fontWeight: 700 }}>
+                카카오뱅크 7979-61-68435 김진호
+              </Box>
+              로 입급해주세요
             </Typography>
           </ListItem>
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
@@ -189,8 +222,8 @@ const MainNotice = () => {
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               총무는 회비 면제에요
             </Typography>
-          </ListItem> */}
-          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+          </ListItem>
+          {/* <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               23년 6월부터 회비를 걷지 않고 있어요
             </Typography>
@@ -200,7 +233,7 @@ const MainNotice = () => {
               남은 회비 소진 할때까지 스크린 정모에서 5천원을 지원해드립니다(단 23년 6월 이후
               신규회원 제외)
             </Typography>
-          </ListItem>
+          </ListItem> */}
         </Box>
       </Box>
       {/* 4 */}
@@ -217,15 +250,18 @@ const MainNotice = () => {
         <Box sx={{ color: '#4E5968' }}>
           <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
-              기존 회원 중 두 달 연속 모임에 참여하지 않는 회원 (정모 이외에 다른 벙에 참여해도
-              괜찮아요!)
+              기존 회원 중{' '}
+              <Box component="span" sx={{ fontWeight: 700 }}>
+                두 달 연속
+              </Box>{' '}
+              모임에 참여하지 않는 회원 (정모 이외에 다른 벙에 참여해도 괜찮아요!)
             </Typography>
           </ListItem>
-          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+          {/* <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               정모 참석 투표에 참석하지 않은 회원
             </Typography>
-          </ListItem>
+          </ListItem> */}
           {/* <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               매달 7일까지 회비를 납부하지 않는 회원
@@ -240,6 +276,11 @@ const MainNotice = () => {
             <Typography variant="h7" fontWeight="350" color="#4E5968">
               개인사정, 건강 문제, 여행, 출장 등 두 달 이상 참여 못 하실것 같은 분 들은 미리
               말씀해주세요
+            </Typography>
+          </ListItem>
+          <ListItem sx={{ display: 'list-item', p: 0, my: 1 }}>
+            <Typography variant="h7" fontWeight="350" color="#4E5968">
+              강퇴는 매달 말일에 진행할 예정이에요
             </Typography>
           </ListItem>
         </Box>
