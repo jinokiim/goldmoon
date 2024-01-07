@@ -3,7 +3,7 @@
  */
 // [37, 40, 39, 41, 40, 42, 50, 45, 48, 46, 45, 37, 41];
 export const totalMembers = [46, 45, 37, 41, 31];
-export const membersLastUpdated = '24년 01월 07일 15시';
+export const membersLastUpdated = '24년 01월 07일 21시';
 export const members = [
   {
     id: '1',
