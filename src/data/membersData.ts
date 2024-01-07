@@ -2,8 +2,8 @@
   ,{ id: '', name: '', gender: 'mf', birth: '', attendance: { '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'], '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, membership_fee: { '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],  '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, reg_date: '2023-00', withdrawal_date: '', bird: 0, is_status: 'y' }
  */
 // [37, 40, 39, 41, 40, 42, 50, 45, 48, 46, 45, 37, 41];
-export const totalMembers = [41, 40, 42, 50, 45, 48, 46, 45, 37, 41];
-export const membersLastUpdated = '23년 08월 28일 10시';
+export const totalMembers = [50, 45, 48, 46, 45, 37, 41, 31];
+export const membersLastUpdated = '24년 01월 07일 15시';
 export const members = [
   {
     id: '1',
@@ -55,9 +55,9 @@ export const members = [
       '2023': ['1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 1,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '4',
@@ -127,9 +127,9 @@ export const members = [
       '2023': ['1', '1', '1', '출장', '1', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 4,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '8',
@@ -163,9 +163,9 @@ export const members = [
       '2023': ['1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-04',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 3,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '10',
@@ -199,9 +199,9 @@ export const members = [
       '2023': ['1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-05',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 3,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '12',
@@ -523,9 +523,9 @@ export const members = [
       '2023': ['1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-12',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 1,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '30',
@@ -595,9 +595,9 @@ export const members = [
       '2023': ['1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 1,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '34',
@@ -829,9 +829,9 @@ export const members = [
       '2023': ['1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-01',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 2,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '47',
@@ -937,9 +937,9 @@ export const members = [
       '2023': ['0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-04',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 4,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '52',
@@ -955,9 +955,9 @@ export const members = [
       '2023': ['0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2022-00',
-    withdrawal_date: '',
+    withdrawal_date: '2023-10',
     bird: 3,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '53',
@@ -1083,7 +1083,7 @@ export const members = [
     reg_date: '2023-06',
     withdrawal_date: '2023-07',
     bird: 4,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '60',
@@ -1135,9 +1135,9 @@ export const members = [
       '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-06',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 4,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '61',
@@ -1171,9 +1171,9 @@ export const members = [
       '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-08',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 1,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '63',
@@ -1191,6 +1191,60 @@ export const members = [
     reg_date: '2023-08',
     withdrawal_date: '',
     bird: 1,
+    is_status: 'y'
+  },
+  {
+    id: '64',
+    name: '김용수',
+    gender: 'm',
+    birth: '97',
+    attendance: {
+      '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
+      '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+    },
+    membership_fee: {
+      '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
+      '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+    },
+    reg_date: '2024-01',
+    withdrawal_date: '',
+    bird: 1,
+    is_status: 'y'
+  },
+  {
+    id: '65',
+    name: '안신영',
+    gender: 'f',
+    birth: '86',
+    attendance: {
+      '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
+      '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+    },
+    membership_fee: {
+      '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
+      '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+    },
+    reg_date: '2024-01',
+    withdrawal_date: '',
+    bird: 3,
+    is_status: 'y'
+  },
+  {
+    id: '66',
+    name: '최성재',
+    gender: 'm',
+    birth: '96',
+    attendance: {
+      '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
+      '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+    },
+    membership_fee: {
+      '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
+      '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+    },
+    reg_date: '2023-11',
+    withdrawal_date: '',
+    bird: 3,
     is_status: 'y'
   }
 ];
