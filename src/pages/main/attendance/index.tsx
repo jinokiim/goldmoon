@@ -30,7 +30,6 @@ import MoveToInit from '@/src/pages/MoveToInit';
 // ----------------------------------------------------------------------
 
 const getIconByStatus = (status: string) => {
-  console.log(status);
   switch (status) {
     case '1':
       return <CheckGreenIcon />;
@@ -39,7 +38,7 @@ const getIconByStatus = (status: string) => {
     case '부상':
       return <InjuryIcon />;
     default:
-      return 'status';
+      return status;
   }
 };
 
