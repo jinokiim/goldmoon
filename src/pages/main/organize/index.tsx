@@ -147,7 +147,7 @@ const IndexPage = function () {
           transform: 'translate(-50%, -50%)'
         }}
       >
-        <Lottie options={defaultLoadingOptions} height={200} width={200} />
+        {/* <Lottie options={defaultLoadingOptions} height={200} width={200} /> */}
       </Box>
     </>
   ) : (
