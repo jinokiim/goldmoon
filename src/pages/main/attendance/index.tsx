@@ -119,36 +119,48 @@ const IndexPage = function () {
                               {period.attendance.a.year.toString().slice(2, 4)}년{' '}
                               {period.attendance.a.month}월
                             </Typography>
-                            {getIconByStatus(
-                              /* @ts-ignore */
-                              item.attendance[period.attendance.a.year][
-                                period.attendance.a.month - 1
-                              ]
-                            )}
+                            {/* @ts-ignore */}
+                            {item.attendance[period.attendance.a.year][
+                              period.attendance.a.month - 1
+                            ] &&
+                              getIconByStatus(
+                                /* @ts-ignore */
+                                item.attendance[period.attendance.a.year][
+                                  period.attendance.a.month - 1
+                                ]
+                              )}
                           </Stack>
                           <Stack direction="column" alignItems="center">
                             <Typography variant="body1" sx={{ mb: 1 }}>
                               {period.attendance.b.year.toString().slice(2, 4)}년{' '}
                               {period.attendance.b.month}월
                             </Typography>
-                            {getIconByStatus(
-                              /* @ts-ignore */
-                              item.attendance[period.attendance.b.year][
-                                period.attendance.b.month - 1
-                              ]
-                            )}
+                            {/* @ts-ignore */}
+                            {item.attendance[period.attendance.b.year][
+                              period.attendance.b.month - 1
+                            ] &&
+                              getIconByStatus(
+                                /* @ts-ignore */
+                                item.attendance[period.attendance.b.year][
+                                  period.attendance.b.month - 1
+                                ]
+                              )}
                           </Stack>
                           <Stack direction="column" alignItems="center">
                             <Typography variant="body1" sx={{ mb: 1 }}>
                               {period.attendance.c.year.toString().slice(2, 4)}년{' '}
                               {period.attendance.c.month}월
                             </Typography>
-                            {getIconByStatus(
-                              /* @ts-ignore */
-                              item.attendance[period.attendance.c.year][
-                                period.attendance.c.month - 1
-                              ]
-                            )}
+                            {/* @ts-ignore */}
+                            {item.attendance[period.attendance.c.year][
+                              period.attendance.c.month - 1
+                            ] &&
+                              getIconByStatus(
+                                /* @ts-ignore */
+                                item.attendance[period.attendance.c.year][
+                                  period.attendance.c.month - 1
+                                ]
+                              )}
                           </Stack>
                         </Stack>
                         {
@@ -190,36 +202,48 @@ const IndexPage = function () {
                               {period.membershipFee.a.year.toString().slice(2, 4)}년{' '}
                               {period.membershipFee.a.month}월
                             </Typography>
-                            {getIconByStatus(
-                              /* @ts-ignore */
-                              item.membership_fee[period.membershipFee.a.year][
-                                period.membershipFee.a.month - 1
-                              ]
-                            )}
+                            {/* @ts-ignore */}
+                            {item.membership_fee[period.membershipFee.a.year][
+                              period.membershipFee.a.month - 1
+                            ] &&
+                              getIconByStatus(
+                                /* @ts-ignore */
+                                item.membership_fee[period.membershipFee.a.year][
+                                  period.membershipFee.a.month - 1
+                                ]
+                              )}
                           </Stack>
                           <Stack direction="column" alignItems="center">
                             <Typography variant="body1" sx={{ mb: 1 }}>
                               {period.membershipFee.b.year.toString().slice(2, 4)}년{' '}
                               {period.membershipFee.b.month}월
                             </Typography>
-                            {getIconByStatus(
-                              /* @ts-ignore */
-                              item.membership_fee[period.membershipFee.b.year][
-                                period.membershipFee.b.month - 1
-                              ]
-                            )}
+                            {/* @ts-ignore */}
+                            {item.membership_fee[period.membershipFee.b.year][
+                              period.membershipFee.b.month - 1
+                            ] &&
+                              getIconByStatus(
+                                /* @ts-ignore */
+                                item.membership_fee[period.membershipFee.b.year][
+                                  period.membershipFee.b.month - 1
+                                ]
+                              )}
                           </Stack>
                           <Stack direction="column" alignItems="center">
                             <Typography variant="body1" sx={{ mb: 1 }}>
                               {period.membershipFee.c.year.toString().slice(2, 4)}년{' '}
                               {period.membershipFee.c.month}월
                             </Typography>
-                            {getIconByStatus(
-                              /* @ts-ignore */
-                              item.membership_fee[period.membershipFee.c.year][
-                                period.membershipFee.c.month - 1
-                              ]
-                            )}
+                            {/* @ts-ignore */}
+                            {item.membership_fee[period.membershipFee.c.year][
+                              period.membershipFee.c.month - 1
+                            ] &&
+                              getIconByStatus(
+                                /* @ts-ignore */
+                                item.membership_fee[period.membershipFee.c.year][
+                                  period.membershipFee.c.month - 1
+                                ]
+                              )}
                           </Stack>
                         </Stack>
                         {
