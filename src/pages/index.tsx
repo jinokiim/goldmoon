@@ -7,7 +7,7 @@ import GoldmoonLogo from '../assets/icons/goldmoon_logo';
 import GolfMainIcon from '../assets/icons/golf_main_icon';
 import { StyledButton } from '../components/common/Styled';
 import { useRouter } from 'next/router';
-import Lottie from 'react-lottie';
+// import Lottie from 'react-lottie';
 import animationData from '../assets/lotties/loading.json';
 import { useEffect, useState } from 'react';
 

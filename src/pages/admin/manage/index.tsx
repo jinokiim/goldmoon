@@ -4,7 +4,7 @@ import LayoutMain from '@/src/layouts/main';
 import { Box, Divider, Typography } from '@mui/material';
 import useSettings from '@/src/hooks/useSettings';
 import { useRouter } from 'next/router';
-import Lottie from 'react-lottie';
+// import Lottie from 'react-lottie';
 import animationData from '../../../assets/lotties/loading.json';
 import { useEffect, useState } from 'react';
 import AppHeader from '@/src/components/Header';

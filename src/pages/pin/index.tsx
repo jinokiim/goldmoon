@@ -17,8 +17,8 @@ import _ from 'lodash';
 
 import { useRecoilState } from 'recoil';
 import { authState, memberState } from '@/src/recoil/atom';
-import { defaultLoadingOptions } from '..';
-import Lottie from 'react-lottie';
+// import { defaultLoadingOptions } from '..';
+// import Lottie from 'react-lottie';
 
 // ----------------------------------------------------------------------
 

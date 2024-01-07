@@ -20,8 +20,8 @@ import { FinalStep } from '@/src/components/organize/FinalStep';
 import { authState } from '@/src/recoil/atom';
 import { useRecoilState } from 'recoil';
 import MoveToInit from '../../MoveToInit';
-import Lottie from 'react-lottie';
-import { defaultLoadingOptions } from '@/src/pages';
+// import Lottie from 'react-lottie';
+// import { defaultLoadingOptions } from '@/src/pages';
 
 // ----------------------------------------------------------------------
 

@@ -21,8 +21,8 @@ import { authState } from '@/src/recoil/atom';
 import { useRecoilState } from 'recoil';
 
 import MoveToInit from '../../MoveToInit';
-import Lottie from 'react-lottie';
-import { defaultLoadingOptions } from '@/src/pages';
+// import Lottie from 'react-lottie';
+// import { defaultLoadingOptions } from '@/src/pages';
 
 // ----------------------------------------------------------------------
 
@@ -32,12 +32,10 @@ export interface memberType {
   name: string;
   gender: string;
   attendance: {
-    '2022': string[];
-    '2023': string[];
+    [key: string]: string[];
   };
   membership_fee: {
-    '2022': string[];
-    '2023': string[];
+    [key: string]: string[];
   };
   reg_date: string;
   withdrawal_date: string;
@@ -188,7 +186,7 @@ const options: ApexOptions = {
   },
   xaxis: {
     tickPlacement: 'between',
-    categories: ['22.07', '22.08', '22.09', '22.10', '22.11', '22.12', '23.01', '23.02']
+    categories: ['23.09', '23.10', '23.11', '23.12', '24.01']
   }
 };
 const state = {

@@ -15,8 +15,8 @@ import { financialHistory } from '@/src/data/financialData';
 import { authState } from '@/src/recoil/atom';
 import { useRecoilState } from 'recoil';
 import MoveToInit from '@/src/pages/MoveToInit';
-import Lottie from 'react-lottie';
-import { defaultLoadingOptions } from '@/src/pages';
+// import Lottie from 'react-lottie';
+// import { defaultLoadingOptions } from '@/src/pages';
 
 // ----------------------------------------------------------------------
 
