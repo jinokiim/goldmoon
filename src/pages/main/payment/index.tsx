@@ -11,7 +11,7 @@ import _ from 'lodash';
 
 import { useRouter } from 'next/router';
 import AppHeader from '@/src/components/Header';
-import { FirstStep } from '@/src/components/organize/FirstStep';
+
 import { SecondStep } from '@/src/components/organize/SecondStep';
 import { memberType } from '../members';
 import { members } from '@/src/data/membersData';
@@ -22,6 +22,7 @@ import { useRecoilState } from 'recoil';
 import MoveToInit from '../../MoveToInit';
 import Lottie from 'react-lottie';
 import { defaultLoadingOptions } from '@/src/pages';
+import { FirstStep } from '@/src/components/payments/FirstStep';
 
 // ----------------------------------------------------------------------
 
@@ -95,43 +96,46 @@ const IndexPage = function () {
     <Layout
       header={
         <>
-          <AppHeader onPrev={() => router.push('/main')} onPrevText={'그룹 나누기'} />
+          <AppHeader onPrev={() => router.push('/main')} onPrevText={'정산하기'} />
         </>
       }
       content={
-        <Box sx={{ mt: 3, textAlign: 'center' }}>
+        <Box sx={{ mt: 3 }}>
           {/*  */}
           {step === 1 && (
             <FirstStep value={myTeam} onChange={handleMyTeam} onNext={handleNextStep} />
           )}
           {step === 2 && (
-            <SecondStep
-              members={sortedMembers}
-              value={myTeam}
-              selectedMembers={selectedMembers}
-              onChange={handleMyTeam}
-              handleSelectedMembers={handleSelectedMembers}
-              onPrev={handlePrevStep}
-              onNext={handleNextStep}
-            />
+            // <SecondStep
+            //   members={sortedMembers}
+            //   value={myTeam}
+            //   selectedMembers={selectedMembers}
+            //   onChange={handleMyTeam}
+            //   handleSelectedMembers={handleSelectedMembers}
+            //   onPrev={handlePrevStep}
+            //   onNext={handleNextStep}
+            // />
+            <></>
           )}
           {step === 3 && (
-            <ThirdStep
-              value={myTeam}
-              selectedMembers={selectedMembers}
-              onChange={handleMyTeam}
-              onPrev={handlePrevStep}
-              onNext={handleNextStep}
-            />
+            // <ThirdStep
+            //   value={myTeam}
+            //   selectedMembers={selectedMembers}
+            //   onChange={handleMyTeam}
+            //   onPrev={handlePrevStep}
+            //   onNext={handleNextStep}
+            // />
+            <></>
           )}
           {step === 4 && (
-            <FinalStep
-              value={myTeam}
-              selectedMembers={selectedMembers}
-              onChange={handleMyTeam}
-              onPrev={handlePrevStep}
-              onNext={handleNextStep}
-            />
+            // <FinalStep
+            //   value={myTeam}
+            //   selectedMembers={selectedMembers}
+            //   onChange={handleMyTeam}
+            //   onPrev={handlePrevStep}
+            //   onNext={handleNextStep}
+            // />
+            <></>
           )}
           {/*  */}
         </Box>
