@@ -3,14 +3,64 @@
  */
 
 // ------------------------------------------------------------------------
-export const financialLastUpdated = '23년 08월 28일 10시';
+export const financialLastUpdated = '24년 01월 07일 21시';
 export const financialNow = {
-  total: '1078597',
-  income: '0',
-  spending: '80000'
+  total: '1893053',
+  income: '1160000',
+  spending: '0'
 };
 
 export const financialHistory = [
+  {
+    id: '41',
+    year: '2024',
+    month: '01',
+    date: '7',
+    condition: 'income',
+    amount: '1160000',
+    detail: '1월 회비',
+    location: ''
+  },
+  {
+    id: '40',
+    year: '2023',
+    month: '11',
+    date: '26',
+    condition: 'income',
+    amount: '10000',
+    detail: '11월 주말정모 반환(2명)',
+    location: ''
+  },
+  {
+    id: '39',
+    year: '2023',
+    month: '11',
+    date: '26',
+    condition: 'spending',
+    amount: '5000',
+    detail: '11월 주말정보(1명 추가)',
+    location: ''
+  },
+  {
+    id: '38',
+    year: '2023',
+    month: '11',
+    date: '23',
+    condition: 'spending',
+    amount: '40000',
+    detail: '11월 주말정모(8명)',
+    location: ''
+  },
+  {
+    id: '37',
+    year: '2023',
+    month: '08',
+    date: '30',
+    condition: 'spending',
+    amount: '300000',
+    detail: '골드문 엠티 지원(10명)',
+    location: ''
+  },
   {
     id: '36',
     year: '2023',
