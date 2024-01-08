@@ -1181,9 +1181,9 @@ export const members = [
       '2024': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-06',
-    withdrawal_date: '2023-07',
+    withdrawal_date: '2024-01',
     bird: 4,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '59',
@@ -1241,9 +1241,9 @@ export const members = [
       '2024': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     },
     reg_date: '2023-06',
-    withdrawal_date: '',
+    withdrawal_date: '2024-01',
     bird: 4,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '60',
