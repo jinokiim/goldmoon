@@ -1,5 +1,5 @@
 /**
-  ,{ id: '', name: '', gender: 'mf', birth: '', attendance: { '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'], '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, membership_fee: { '2022': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],  '2023': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, reg_date: '2043-00', withdrawal_date: '', bird: 0, is_status: 'y' }
+  ,{ id: '', name: '', gender: 'mf', birth: '', attendance: { '2024': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, membership_fee: { '2024': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] }, reg_date: '2024-00', withdrawal_date: '', bird: 0, is_status: 'y' }
  */
 // [37, 40, 39, 41, 40, 42, 50, 45, 48, 46, 45, 37, 41, 46];
 export const totalMembers = [45, 37, 41, 31, 41];
@@ -1294,7 +1294,7 @@ export const members = [
     reg_date: '2024-01',
     withdrawal_date: '',
     bird: 2,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '71',
@@ -1306,7 +1306,7 @@ export const members = [
     reg_date: '2024-02',
     withdrawal_date: '',
     bird: 2,
-    is_status: 'y'
+    is_status: 'n'
   },
   {
     id: '72',
@@ -1402,6 +1402,18 @@ export const members = [
     reg_date: '2024-01',
     withdrawal_date: '',
     bird: 2,
+    is_status: 'y'
+  },
+  {
+    id: '80',
+    name: '박찬률',
+    gender: 'm',
+    birth: '95',
+    attendance: { '2024': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] },
+    membership_fee: { '2024': ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] },
+    reg_date: '2024-02',
+    withdrawal_date: '',
+    bird: 3,
     is_status: 'y'
   }
 ];
